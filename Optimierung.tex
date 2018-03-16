@@ -1,0 +1,51 @@
+\chapter{System-Anpassungen zur Optimierung von Analyse-Resultaten \textcolor{red}{OSTENDORFF}}
+	
+	Ziel: Analyseprävention, um interne Funktionalität zu Verschleiern und Konzeption von Gegenmaßnahmen zu erschweren.
+
+	Malware nutzt systeminterne API-Calls, um Ausführung in virtualisierter Umgebung zu determinieren. Modifikation der bekannten Verifikationsmechanismen 
+	(Auslesen von MAC/BIOS/IN-Calls) erlaubt Rückgabe valider Parameter, sodass die Analyseumgebung als Produktivsystem identifiziert wird.
+	
+	Entropiemanipulation von systeminternen Zufallsgeneratoren, kann Dechiffrierung verschlüsselter Kommunikationspakete ermöglichen
+	
+	
+	
+	When the code runs, it waits 300,000 milliseconds, or five minutes, before executing the DecryptCode subroutine, as shown in the image above. It then waits 20 minutes and executes the ModifyRegistry subroutine. After executing the Network\_main subroutine, it waits another 20 minutes.
+	Automated threat analysis systems only spend a small amount of time on one file so they may not detect the code as malware.
+	% Quelle: https://www.symantec.com/connect/blogs/malware-authors-using-new-techniques-evade-automated-threat-analysis-systems
+	
+	A hook is a point in the system message-handling mechanism where an application can install a subroutine to monitor the message traffic in the system. The SetWindowsHookExA API function shown in the image above installs the \_main\_routine subroutine to monitor mouse message traffic so that when the malware receives messages from the mouse, that is, if it is moved or buttons clicked, it runs. As a person usually uses a mouse when using Windows, the \_main\_routine subroutine works fine. But as an automated threat analysis system doesn't use a mouse, the code remains dormant so an automated threat analysis system may not detect it as malware.
+	
+	Lastly, if you use VMware, adding these options to your POWERED OFF .vmx file will be of great value if you perform malware analysis.
+	
+	isolation.tools.getPtrLocation.disable = ?TRUE?
+	isolation.tools.setPtrLocation.disable = ?TRUE?
+	isolation.tools.setVersion.disable = ?TRUE?
+	isolation.tools.getVersion.disable = ?TRUE?
+	monitor\_control.disable\_directexec = ?TRUE?
+	monitor\_control.disable\_chksimd = ?TRUE?
+	monitor\_control.disable\_ntreloc = ?TRUE?
+	monitor\_control.disable\_selfmod = ?TRUE?
+	monitor\_control.disable\_reloc = ?TRUE?
+	monitor\_control.disable\_btinout = ?TRUE?
+	monitor\_control.disable\_btmemspace = ?TRUE?
+	monitor\_control.disable\_btpriv = ?TRUE?
+	monitor\_control.disable\_btseg = ?TRUE?
+	
+	These ?undocumented? options are from a research paper done several years ago, but are still useful today in preventing some VM-detection techniques. Please note however, that this will break some VM functionality, as these options sever the communications channel between your host machine and guest VM.
+
+ QUELLE: %http://handlers.sans.org/tliston/ThwartingVMDetection_Liston_Skoudis.pdf
+	\section{Konzeptionelle Aspekte}
+	
+	\section{Analoger Aufbau zum vorherigen Kapitel, stellt Korrespondenz her}
+	
+	\section{Zusätzliche Methoden der Evasion}
+
+	- aleatorische Klick-Anzahl als Aktivierungs-Trigger (kann in virtuellen Umgebungen nicht automatisiert simuliert werden)\\
+	- Aktivierung nach n-maligem Reboot\\
+	- \textit{red herrings}: randomisiertes Verhalten (Ausführung zufälliger, sinnlose Quellcode-Fragmente) zur Verwirrung des Analysten
+	%https://www.symantec.com/connect/blogs/malware-authors-using-new-techniques-evade-automated-threat-analysis-systems
+	
+	Ausgehend von der individuellen Zielperspektive konkreter Malware-Implementierungen verzichten einige Malware-Derivate bewusst auf Implementierung dedizierter Detektionstechniken; dies beispielsweise sinnvoll, wenn Angriffsziele potentiell in virtualisierten Systemumgebungen realisiert sind. Auf Basis der in Abschnitt \textcolor{red}{REF} präsentierten Attribute wirtschaftliche Attraktivität Majorität der global erreichbaren Serversysteme virtualisiert. Erfolgreiche Kompromittierung damit von Realisierung der malware-inhärenten Funktionalität abhängig.
+	
+	
+	BLUEPILL ALS BEISPIEL

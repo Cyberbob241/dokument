@@ -1,0 +1,31 @@
+\chapter{Evaluation}
+
+	Auf Basis der im Rahmen dieser Arbeit erlangten Erkenntnisse wird im folgenden Kapitel die Erfolgswahrscheinlichkeit der konzipierten Optimierungsmaßnahmen evaluiert, wobei insbesondere deren Realisierbarkeit \mbox{in produktiven Analyseumgebungen analysiert wird.}
+
+	\section{Erfolgswahrscheinlichkeit der Detektionmethoden}\label{sec:wkt}
+	
+		Basierend auf den Resultaten der in Kapitel \ref{cha:Virtualisierung} erarbeiteten Verfahren muss die Realisierung einer exhaustive Detektionsprävention aufgrund der hohen Diversität und Heterogenität potentieller Virtualisierungs-Indikatoren als kaum umsetzbar konstatiert werden. Insbesondere bei der kombinierten Verwendung verschiedener Detektionstechniken können belastbare Informationen über die eingesetzte Systemumgebung deduziert werden, was final in der Identifikation von präsenten Hypervisor-Realisierungen resultiert. Aus der Perspektive des Malware-Autors wird die Implementierung von Detektionsmethoden lediglich durch die intentionale Minimierung des quantitativen Malware-Profiles limitiert. Um die weitestgehende Verdecktheit bei Ausführung und Distribution der Binaries garantieren zu können, werden häufig besonders erfolgversprechende Detektionsvektoren mit vergleichsweise geringem Implementierungsaufwand kombiniert.
+		Triviale Methoden zur Identifikation virtueller Systeme, welche primär auf der Examination leicht manipulierbarer Systemparameter wie MAC-Adressen basieren, werden innerhalb dedizierter Analyseumgebungen unter Verwendung entsprechender Systemkonfigurationen meist automatisiert oder durch manuelle Rekonfiguration verhindert. 
+		Die Malware-Binaries implementieren daher häufig ausgewählte Spezialfälle, wobei die Integrität der im Detektionskontext instrumentalisierten Attribute  oftmals essentiell für die korrekte Funktionalität der virtualisierten Systemumgebung ist. Auf diese Weise können manuelle Modifikationen, beispielsweise durch einen Analysten, weitestgehend ausgeschlossen werden. Exemplarisch sei an dieser Stelle auf die Treibersignaturen emulierter Hardware-Komponenten verwiesen, welche häufig kompromittierende Namensattribute enthalten. Da die emulierte Treiberfunktionalität zur Interaktion mit der verwendeten Hypervisor-Lösung jedoch obligatorisch ist, erweisen sich umfangreiche Modifikationen zur Verschleierung des virtuellen Charakters aufgrund der systeminternen Komplexität häufig als kaum realisierbar.\\
+		\noindent Unter Berücksichtigung der zunehmenden Expansion in der produktiven Nutzung von virtualisierten Systemen verzichten einige Malware-Implementierungen bewusst auf die Detektion des virtuellen Systemkontextes, um den Umfang potentiell relevanter Zielsysteme nicht zu limitieren \textcolor{red}{[11]}. 
+		%Quelle: https://books.google.de/books?id=hrSoCAAAQBAJ&pg=PA17&lpg=PA17&dq=less+vm+detection&source=bl&ots=KqJDeb-Nho&sig=YFe6waQMlr4Qhd1gvDu72OlBQBY&hl=de&sa=X&ved=0ahUKEwjP-rOZ5OzZAhXMjSwKHdzNCUkQ6AEIUTAF#v=onepage&q=gain%20popul&f=false 
+		Um dennoch die Examination der Malware innerhalb dedizierter Analyseumgebungen obstruieren zu können, wird anstelle der Virtualisierungs-Parameter die Detektion von Indikatoren der stark spezialisierten Analyseumgebungen forciert. Dieser Prozess kann beispielsweise durch die gezielte Identifikation von speziellen Debugger- und Analyseprozessen sowie kompromittierenden Namensattributen einzelner Systemdateien realisiert werden. Die verwendeten Konzepte sind dabei grundlegend kongruent zum Vorgehen bei der Erkennung virtueller Systeme, weshalb auch in diesem \makebox[\linewidth][s]{Kontext eine potentiell hohe Detektionswahrscheinlichkeit konstatiert werden muss.}
+		
+	
+	\section{Realisierbarkeit der Optimierungsansätze}
+	
+		\textcolor{red}{Ostendorff}
+	
+		- Aleatorische Evasionstechniken von Malware (Click-Trigger, Reboot-Trigger) kaum deterministisch emulierbar\\
+	
+		\noindent - Komplexität von tiefgreifenden Modifikationen wie Entropie-Manipulation\\
+		
+		\noindent - Verfahren liefern theoretische Ansätze, hohe Komplexität in \\
+		  realitätsnahen Anwendungsszenarien\\
+		  
+		\noindent Modifikationen der Analyseumgebungen induzieren wiederum Anomalien, die durch Malware-Implementierung detektierbar. Exemplarisch systeminterne Reduktion Entropie auf Minimalsatz referenziert, suboptimale Realisierung ermöglicht Detektion virtualisierter Analyseumgebung durch Testroutinen innerhalb der Malware. \\\\
+		  
+		 \noindent ==> hoher Aufwand potentiell tiefgreifender Systemmodikfikationen , exhaustive Prävention nicht möglich, kontinuierliche Adaption neuer Detektionstechniken erforderlich, induzieren neue Ansätze zur Realisierung Detektionsmechanismen \textcolor{blue}{<TXT>}
+		 
+		 
+		 Insbesondere Automatisierung oftmals kritisch. 
