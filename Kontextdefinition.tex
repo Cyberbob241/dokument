@@ -5,19 +5,19 @@ Durch die Verwendung von Kryptohash-Werten und asymmetrischer Verschlüsselung wi
 
 	\section{Kryptographische Hashfunktionen}
 		
-		Hash- oder Streuwertfunktionen sind Funktionen, die eine beliebig große Eingabemenge auf eine kleinere Ausgabemenge abbilden. Die Länge der Eingabe spielt hierbei keine Rollen, wobei die Länge der Ausgaben immer gleich sein sollte. Hashfunktionen sollen in der Regel deterministisch sein, das heißt bei gleicher Eingabe sollte auch das gleiche Ergebnis erzielt werden. Diese Berechnung der Hash-Werte soll möglichst schnell von statten gehen. Wenn sich ein Zeichen des Eingabewertes ändert, sollen sich möglichst viele des Zielwertes ändern. Ein Rückschluss von Hash- auf Eingabewert soll nicht effektiv möglich sein, was man als "`Einwegfunktion"' bezeichnet \cite{kh}.
+		Hash- oder Streuwertfunktionen sind Funktionen, die eine beliebig große Eingabemenge auf eine kleinere Ausgabemenge abbilden. Die Länge der Eingabe spielt hierbei keine Rollen, wobei die Länge der Ausgaben immer gleich sein sollte. Hashfunktionen sind deterministisch, das heißt bei gleicher Eingabe muss auch das gleiche Ergebnis erzielt werden. Diese Berechnung der Hash-Werte soll möglichst schnell von statten gehen. Für einige Anwednungsfälle ist ein zusätzliches Kriterium, dass wenn sich ein Zeichen des Eingabewertes ändert, sich möglichst viele des Stellen des Zielwertes ändern sollen. Ein Rückschluss von Hash- auf Eingabewert soll nicht effektiv möglich sein, was man als "`Einwegfunktion"' bezeichnet \cite{kh}.
 		
-		Die bisher genannten Eigenschaften sollten sowohl auf Hashfunktionen als auch Kryptologische Hashfunktionen zutreffen. Bedingungen, die für eine Kryptologische Hashfunktion aber für eine normale Hashfunktion nicht zwingend erfüllt sein müssen, sind die schwache und starke Kollisionsresistenz. Schwache Kollisionsresistenz bedeutet, dass es nicht effektiv möglich sein darf zu einem gegebenen Eingabewert einen weiteren Wert zu finden, sodass deren beide Ergebnishashes gleich sind. Starke Kollisionsresistenz bedeutet, dass es nicht effektiv möglich sein darf überhaupt ein solches Paar aus der gesamten möglichen Eingabemenge zu finden, deren Ergebnishashes gleich sind. Die 4 Kernanforderungen für Kryptologische Hashes werden in Abbildung \ref{khash} genannt. Einige Kryptologische Hashfunktionen haben zusätzlich die Möglichkeit einen zusätzlichen Schlüssel für die Funktion anzugeben, sodass beispielswesie zwei Werte mit unterschiedlichem Schlüssel auch unterschiedliche Hashes erzeugen. Diese Eigenschaft ist allerdings kein zwingendes Kriterium für eine Kryptologische Hashfunktion.
+		Die bisher genannten Eigenschaften sollten sowohl auf Hashfunktionen als auch Kryptologische Hashfunktionen zutreffen. Bedingungen, die für eine Kryptologische Hashfunktion aber für eine normale Hashfunktion nicht zwingend erfüllt sein müssen, sind die schwache und starke Kollisionsresistenz. Schwache Kollisionsresistenz bedeutet, dass es nicht effektiv möglich sein darf zu einem gegebenen Eingabewert einen weiteren Wert zu finden, sodass deren beide Ergebnishashes gleich sind. Starke Kollisionsresistenz bedeutet, dass es nicht effektiv möglich sein darf überhaupt ein solches Paar aus der gesamten möglichen Eingabemenge zu finden, deren Ergebnishashes gleich sind. Einige Kryptologische Hashfunktionen haben zusätzlich die Möglichkeit einen zusätzlichen Schlüssel für die Funktion anzugeben, sodass beispielswesie zwei Werte mit unterschiedlichem Schlüssel auch unterschiedliche Hashes erzeugen. Diese Eigenschaft ist allerdings kein zwingendes Kriterium für eine Kryptologische Hashfunktion. Die 4 Kernanforderungen für Kryptologische Hashes werden in der folgenden Liste dargestellt: 
 		\newpage
 		
-		\begin{figure}[htbp]
-			\centering
-			\includegraphics[keepaspectratio,width=10cm]{Bilder/khash.jpg}
-			\caption{4 Kernanforderungen an Kryptologische Hashes}
-			\label{khash}
-		\end{figure}
+\begin{enumerate}
+\item{Effiziente / Schnelle Berechnung}
+\item{Einwegfunktion}
+\item{Schwache Kollisionsresistenz}
+\item{Starke Kolissionsresistenz}
+\end{enumerate}
 		
-		Aufgrund der immer größer werdenden Rechenleistungen von Computern und beispielsweise dafür eingesetzen Großrechnern oder Computer-Cluster gibt es weite Diskussionen darüber, welche (Krpytolgischen) Hashfunktionen tatsächlich (noch) sicher sind. Die am weitesten verbreiteten Kryptologischen Hashfunktionen sind die SHA-"'X"' und MD"'X"' Reihen, wobei "`X"' für den jeweiligen Versionsname steht \cite{shamd}. Auch bei diesen Hash-Familien wird mittlerweile von der Verwendung alter Versionen aufgrund mangelnder Sicherheit abgeraten. Bei den aktuellen Vertretern dieser Hashes geht man aber von ausreichender Sicherheit aus.
+		Aufgrund der immer größer werdenden Rechenleistungen von Computern und beispielsweise dafür eingesetzen Großrechnern oder Computer-Cluster gibt es weite Diskussionen darüber, welche (Kryptolgischen) Hashfunktionen tatsächlich (noch) sicher sind. Die am weitesten verbreiteten Kryptologischen Hashfunktionen sind die SHA-"'X"' und MD"'X"' Reihen, wobei "`X"' für den jeweiligen Versionsname steht \cite{shamd}. Auch bei diesen Hash-Familien wird mittlerweile von der Verwendung alter Versionen aufgrund mangelnder Sicherheit abgeraten. Bei den aktuellen Vertretern dieser Hashes geht man aber von ausreichender Sicherheit aus.
 		
 	\section{\label{subsec:p2p}Dezentralisierte Netzwerkstrukturen}
 	
