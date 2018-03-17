@@ -100,7 +100,7 @@
 		/**
 		* @dev Calculates the correct price of Drinks ordered
 		* @notice Please call the calcPrice-Function first, and send the right Amount of Ether
-		* @notice Contrac't will be reverted otherwise
+		* @notice Contract will be reverted otherwise
 		* @param _drinks provide array of listed drinks
 		* @param _amounts array of ordered amounts
 		* @return uint, price of coctails in Ether 
@@ -130,7 +130,7 @@
 		/**
 		* @dev Token-transfer from msg.sender to address
 		* @notice Please call the calcPrice-Function first, and send the right Amount of Ether
-		* @notice Contrac't will be reverted otherwise
+		* @notice Contract will be reverted otherwise
 		* @param _drinks provide array of listed drinks
 		* @param _amounts array of ordered amounts
 		*/
@@ -154,7 +154,7 @@
 		
 		/**
 		* @dev Removes ordered cotails from list
-		* @notice Please don't call this contract if you arent the restaurant manager
+		* @notice Please do not call this contract if you arent the restaurant manager
 		* @param _drinks provide array of served drinks
 		* @param _amounts array of served amounts
 		*/
@@ -166,7 +166,7 @@
 		}
 		
 		/**
-		* @notice Fallback. Don't ever call this function. Thanks. 
+		* @notice Fallback. Do not call this function ever. Thanks. 
 		*/
 		function() public payable { EmptyPay(msg.sender, msg.value); }
 		
