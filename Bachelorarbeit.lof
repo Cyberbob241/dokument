@@ -3,9 +3,9 @@
 \contentsline {figure}{\numberline {1.1}{\ignorespaces Schematische Darstellung des Blockchain-Konzeptes\relax }}{2}{figure.caption.7}
 \contentsline {figure}{\numberline {1.2}{\ignorespaces Logos der Blockchain-Anwendungen Ethereum, Bitcoin und Hyperledger\relax }}{2}{figure.caption.8}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Netztopologien\relax }}{6}{figure.caption.9}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Zentralisiertes Netz \cite {star}}}}{6}{subfigure.1.1}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Verteiltes Netz \cite {mesh}}}}{6}{subfigure.1.2}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Netztopologien\relax }}{7}{figure.caption.9}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Zentralisiertes Netz \cite {star}}}}{7}{subfigure.1.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Verteiltes Netz \cite {mesh}}}}{7}{subfigure.1.2}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces \"Ubersicht des \textit {Trello}-basierten Kanban-Boards}}{13}{figure.caption.10}
 \contentsline {figure}{\numberline {3.2}{\ignorespaces Exemplarische Karte des \textit {Trello}-basierten Kanban-Boards}}{14}{figure.caption.11}
@@ -14,11 +14,11 @@
 \contentsline {figure}{\numberline {4.2}{\ignorespaces Beispiel eines UML-Diagramms f\"ur einen Anwendungsfall}}{21}{figure.caption.13}
 \contentsline {figure}{\numberline {4.3}{\ignorespaces Exemplarisches \textit {Slicing} eines monolithischen Use Cases}}{22}{figure.caption.15}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Ansicht f\"ur Besucher\relax }}{32}{figure.caption.16}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Ansicht f\"ur Mitarbeiter:Bestellungs-\"Ubersicht\relax }}{33}{figure.caption.17}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Ansicht f\"ur Mitarbeiter: Verifikation durch Etherscan\relax }}{34}{figure.caption.18}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Ansicht f\"ur Besucher\relax }}{33}{figure.caption.16}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Ansicht f\"ur Mitarbeiter:Bestellungs-\"Ubersicht\relax }}{34}{figure.caption.17}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Ansicht f\"ur Mitarbeiter: Verifikation durch Etherscan\relax }}{35}{figure.caption.18}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces SWOT-Analyse der Protol\"osung}}{39}{figure.caption.20}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces SWOT-Analyse der Protol\"osung}}{40}{figure.caption.20}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

@@ -1,172 +1,166 @@
-\begin{thebibliography}{10}
+\begin{thebibliography}{xx}
 
-\bibitem{gd21jh}
-{ZEIT ONLINE GmbH}.
-\newblock {Das Gold des 21. Jahrhunderts}.
-\newblock
-  \url{http://www.zeit.de/angebote/zukunftsfaktor-technologie/gold-21-jahrhundert},
-  Stand:Februar. 2018.
+\harvarditem{Badev \harvardand\ Chen}{2014}{badev}
+Badev, A. \harvardand\ Chen, M.  \harvardyearleft 2014\harvardyearright ,
+  `Bitcoin: Technical background and data analysis'.
 
-\bibitem{kwrank}
-{Statista GmbH}.
-\newblock {Die Top 10 der Kryptow{"a}hrungen}.
-\newblock
-  \url{https://de.statista.com/infografik/1939/marktkapitalisierung-von-kryptowaehrungen/},
-  Stand:Februar. 2018.
+\harvarditem{Bitcoin-Wiki}{n.d.{\em a}}{BC-Wiki}
+Bitcoin-Wiki  \harvardyearleft n.d.{\em a}\harvardyearright , `Bitcoin-wiki'.
+\newline\harvardurl{https://en.bitcoin.it/wiki}
 
-\bibitem{Block}
-Konstantinos Christidis and Michael Devetsikiotis.
-\newblock Blockchains and smart contracts for the internet of things.
-\newblock {\em IEEE}, 2016.
+\harvarditem{Bitcoin-Wiki}{n.d.{\em b}}{PoW}
+Bitcoin-Wiki  \harvardyearleft n.d.{\em b}\harvardyearright , `Proof-of-work'.
+\newline\harvardurl{https://en.bitcoin.it/wiki/Proof\_of\_work}
 
-\bibitem{bafin}
-Bundesanstalt f{"u}r Finanzdienstleustungsaufsicht.
-\newblock Blockchain-technologie, 2017.
+\harvarditem{blockchain.info}{n.d.}{BCS}
+blockchain.info  \harvardyearleft n.d.\harvardyearright , `Bitcoin blockchain
+  size'.
+\newline\harvardurl{https://blockchain.info/charts/blocks-size}
 
-\bibitem{kh}
-Elektronik Kompendium.
-\newblock Kryptografische hash-funktionen.
+\harvarditem{Buterin}{n.d.}{ETHW}
+Buterin, V.  \harvardyearleft n.d.\harvardyearright , `A next-generation smart
+  contract and decentralized application platform'.
+\newline\harvardurl{https://github.com/ethereum/wiki/wiki/White-Paper}
 
-\bibitem{shamd}
-Elektronik Kompendium.
-\newblock Sha und md.
+\harvarditem{Christidis \harvardand\ Devetsikiotis}{2016}{Block}
+Christidis, K. \harvardand\ Devetsikiotis, M.  \harvardyearleft
+  2016\harvardyearright , `Blockchains and smart contracts for the internet of
+  things', {\em IEEE} .
 
-\bibitem{star}
-Wiki Commens.
-\newblock Network topology star.
+\harvarditem{Commens}{n.d.{\em a}}{mesh}
+Commens, W.  \harvardyearleft n.d.{\em a}\harvardyearright , `Network topology
+  mesh'.
+\newline\harvardurl{https://commons.wikimedia.org/wiki/File:NetworkTopology-Mesh.png}
 
-\bibitem{mesh}
-Wiki Commens.
-\newblock Network topology mesh.
+\harvarditem{Commens}{n.d.{\em b}}{star}
+Commens, W.  \harvardyearleft n.d.{\em b}\harvardyearright , `Network topology
+  star'.
+\newline\harvardurl{https://commons.wikimedia.org/wiki/File:NetworkTopology-Star.png}
 
-\bibitem{stallings}
-William Stallings.
-\newblock {\em Network Security Essentials: Applications and Standards}.
-\newblock Prentice Hall Press, 2010.
+\harvarditem{Dannen}{2017}{Dannen-2017}
+Dannen, C.  \harvardyearleft 2017\harvardyearright , {\em Introducing Ethereum
+  and Solidity: Foundations of Cryptocurrency and Blockchain Programming for
+  Beginners}, 1st edn, Apress, Berkely, CA, USA.
 
-\bibitem{badev}
-Anton Badev and Matthew Chen.
-\newblock Bitcoin: Technical background and data analysis, 2014.
+\harvarditem{Ethereum}{2017}{soliditydoc}
+Ethereum  \harvardyearleft 2017\harvardyearright , {\em Solidity
+  Documentation}.
+\newline\harvardurl{https://solidity.readthedocs.io}
 
-\bibitem{franco}
-Pedro Franco.
-\newblock {\em Understanding Bitcoin: Cryptography, Engineering, and
-  Economics}.
-\newblock John Wiley and Sons, Ltd, 2014.
+\harvarditem{Ethereumkaufen}{n.d.}{ETHE}
+Ethereumkaufen  \harvardyearleft n.d.\harvardyearright , `Ethereum zukunft: Der
+  ethereum fahrplan'.
+\newline\harvardurl{https://ethereum-kaufen.de}
 
-\bibitem{kcur}
-Annalee McWilliams.
-\newblock Bitcoin, ethereum und co.: Kryptow{"a}hrungen einfach erkl{"a}rt,
-  2017.
+\harvarditem{Etherscan}{2018}{etherscan}
+Etherscan  \harvardyearleft 2018\harvardyearright , `The ethereum block
+  explorer'.
+\newline\harvardurl{https://etherscan.io/}
 
-\bibitem{BITB}
-Vincenzo Morabito.
-\newblock {\em Business Innovation Through Blockchain}.
-\newblock Springer Verlag, 2017.
+\harvarditem{Faizod:}{zuletzt besucht am: 20.02.2018}{faizod1}
+Faizod:  \harvardyearleft zuletzt besucht am: 20.02.2018\harvardyearright ,
+  `https://faizod.com/studie-zum-thema-blockchain/'.
 
-\bibitem{BC-Wiki}
-Bitcoin-Wiki.
-\newblock Bitcoin-wiki.
+\harvarditem{Franco}{2014}{franco}
+Franco, P.  \harvardyearleft 2014\harvardyearright , {\em Understanding
+  Bitcoin: Cryptography, Engineering, and Economics}, John Wiley and Sons, Ltd.
 
-\bibitem{BC}
-Satoshi Nakamoto.
-\newblock Bitcoin: A peer-to-peer electronic cash system, 2008.
+\harvarditem{f{"u}r Finanzdienstleustungsaufsicht}{2017}{bafin}
+f{"u}r Finanzdienstleustungsaufsicht, B.  \harvardyearleft
+  2017\harvardyearright , `Blockchain-technologie'.
+\newline\harvardurl{https://www.bafin.de}
 
-\bibitem{BCS}
-blockchain.info.
-\newblock Bitcoin blockchain size.
+\harvarditem{Gl{"a}ser}{2010}{Glaeser2010}
+Gl{"a}ser, J.  \harvardyearleft 2010\harvardyearright , {\em Experteninterviews
+  und qualitative Inhaltsanalyse}, Springer.
 
-\bibitem{PoW}
-Bitcoin-Wiki.
-\newblock Proof-of-work.
+\harvarditem{Kaulartz}{zuletzt besucht am: 04.03.218}{Kaulartz}
+Kaulartz, M.  \harvardyearleft zuletzt besucht am: 04.03.218\harvardyearright ,
+  `https://causa.tagesspiegel.de/wirtschaft/wie-weiter-mit-den-bitcoins/ein-bisschen-regulierung-reicht-schon.html'.
 
-\bibitem{CC}
-Chjango Unchained.
-\newblock Consensus compare: Tendermint bft vs. eos dpos.
+\harvarditem{Kompendium}{n.d.{\em a}}{kh}
+Kompendium, E.  \harvardyearleft n.d.{\em a}\harvardyearright ,
+  `Kryptografische hash-funktionen'.
+\newline\harvardurl{https://www.elektronik-kompendium.de}
 
-\bibitem{ETHW}
-Vitalik Buterin.
-\newblock A next-generation smart contract and decentralized application
-  platform.
+\harvarditem{Kompendium}{n.d.{\em b}}{shamd}
+Kompendium, E.  \harvardyearleft n.d.{\em b}\harvardyearright , `Sha und md'.
+\newline\harvardurl{https://www.elektronik-kompendium.de}
 
-\bibitem{ETHY}
-Gavin Wood.
-\newblock Ethereum: A secure decentralised generalised transaction ledger.
+\harvarditem{McWilliams}{2017}{kcur}
+McWilliams, A.  \harvardyearleft 2017\harvardyearright , `Bitcoin, ethereum und
+  co.: Kryptow{"a}hrungen einfach erkl{"a}rt'.
+\newline\harvardurl{http://www.ariva.de}
 
-\bibitem{ETHT}
-Stephan Tual.
-\newblock Ethereum launches.
+\harvarditem{Morabito}{2017}{BITB}
+Morabito, V.  \harvardyearleft 2017\harvardyearright , {\em Business Innovation
+  Through Blockchain}, Springer Verlag.
 
-\bibitem{ETHE}
-Ethereumkaufen.
-\newblock Ethereum zukunft: Der ethereum fahrplan.
+\harvarditem{Nakamoto}{2008}{BC}
+Nakamoto, S.  \harvardyearleft 2008\harvardyearright , `Bitcoin: A peer-to-peer
+  electronic cash system'.
+\newline\harvardurl{https://bitcoin.org}
 
-\bibitem{Stelzer2002}
-Dirk Stelzer.
-\newblock Risikoanalysen als hilfsmittel zur entwicklung von
-  sicherheitskonzepten in der informationsverarbeitung.
-\newblock {\em ITSicherheitsmanagement in Banken.}, 2002.
+\harvarditem{Nielsen}{1999}{Nielsen:1999:DWU:519216}
+Nielsen, J.  \harvardyearleft 1999\harvardyearright , {\em Designing Web
+  Usability: The Practice of Simplicity}, New Riders Publishing, Thousand Oaks,
+  CA, USA.
 
-\bibitem{wiwo2}
-Wiwo:.
-\newblock
-  http://blog.wiwo.de/look-at-it/2017/11/16/8-von-10-unternehmen-kennen-blockchain-aber-nur-7-prozent-halten-technologie-fuer-marktreif/,
-  zuletzt besucht am 04.03.2018.
+\harvarditem{Paper}{2017}{EthWP-2017}
+Paper, E.~W.  \harvardyearleft 2017\harvardyearright , {\em Ethereum White
+  Paper}.
+\newline\harvardurl{https://github.com/ethereum/wiki/wiki/White-Paper}
 
-\bibitem{Kaulartz}
-Markus Kaulartz.
-\newblock
-  https://causa.tagesspiegel.de/wirtschaft/wie-weiter-mit-den-bitcoins/ein-bisschen-regulierung-reicht-schon.html,
-  zuletzt besucht am: 04.03.218.
+\harvarditem[Schlatt et~al.]{Schlatt, Schweizer, Urbach \harvardand\
+  Fridgen}{2016}{FIT}
+Schlatt, V., Schweizer, A., Urbach, N. \harvardand\ Fridgen, G.
+  \harvardyearleft 2016\harvardyearright , `Blockchain: Grundlagen, anwendungen
+  und potenziale', {\em Projektgruppe Wirtschaftsinformatik des
+  Fraunhofer-Instituts f{"u}r Angewandte Informationstechnik FIT} .
 
-\bibitem{Glaeser2010}
-Jochen Gl{"a}ser.
-\newblock {\em Experteninterviews und qualitative Inhaltsanalyse}.
-\newblock Springer, 2010.
+\harvarditem{Stallings}{2010}{stallings}
+Stallings, W.  \harvardyearleft 2010\harvardyearright , {\em Network Security
+  Essentials: Applications and Standards}, Prentice Hall Press.
 
-\bibitem{soliditydoc}
-Ethereum.
-\newblock {\em Solidity Documentation}, 2017.
+\harvarditem{{Statista GmbH}}{2018}{kwrank}
+{Statista GmbH}  \harvardyearleft 2018\harvardyearright , `{Die Top 10 der
+  Kryptow{"a}hrungen}',
+  \url{https://de.statista.com/infografik/1939/marktkapitalisierung-von-kryptowaehrungen/}.
 
-\bibitem{Wood-2017}
-Gavin Wood.
-\newblock {\em Ethereum: A secure decentralised generalised transaction
-  ledger}, 2017.
+\harvarditem{Stelzer}{2002}{Stelzer2002}
+Stelzer, D.  \harvardyearleft 2002\harvardyearright , `Risikoanalysen als
+  hilfsmittel zur entwicklung von sicherheitskonzepten in der
+  informationsverarbeitung', {\em ITSicherheitsmanagement in Banken.} .
 
-\bibitem{EthWP-2017}
-Ethereum~White Paper.
-\newblock {\em Ethereum White Paper}, 2017.
+\harvarditem{Tual}{n.d.}{ETHT}
+Tual, S.  \harvardyearleft n.d.\harvardyearright , `Ethereum launches'.
+\newline\harvardurl{https://web.archive.org/web/20150811013142/https://blog.ethereum.org/2015/07/30/ethereum-launches/}
 
-\bibitem{Nielsen:1999:DWU:519216}
-Jakob Nielsen.
-\newblock {\em Designing Web Usability: The Practice of Simplicity}.
-\newblock New Riders Publishing, Thousand Oaks, CA, USA, 1999.
+\harvarditem{Unchained}{n.d.}{CC}
+Unchained, C.  \harvardyearleft n.d.\harvardyearright , `Consensus compare:
+  Tendermint bft vs. eos dpos'.
+\newline\harvardurl{https://blog.cosmos.network/consensus-compare-tendermint-bft-vs-eos-dpos-46c5bca7204b}
 
-\bibitem{etherscan}
-Etherscan.
-\newblock The ethereum block explorer, 2018.
+\harvarditem{Wiwo:}{zuletzt besucht am 04.03.2018{\em a}}{wiwo2}
+Wiwo:  \harvardyearleft zuletzt besucht am 04.03.2018{\em a}\harvardyearright ,
+  `http://blog.wiwo.de/look-at-it/2017/11/16/8-von-10-unternehmen-kennen-blockchain-aber-nur-7-prozent-halten-technologie-fuer-marktreif/'.
 
-\bibitem{Dannen-2017}
-Chris Dannen.
-\newblock {\em Introducing Ethereum and Solidity: Foundations of Cryptocurrency
-  and Blockchain Programming for Beginners}.
-\newblock Apress, Berkely, CA, USA, 1st edition, 2017.
+\harvarditem{Wiwo:}{zuletzt besucht am 21.02.2018{\em b}}{wiwo1}
+Wiwo:  \harvardyearleft zuletzt besucht am 21.02.2018{\em b}\harvardyearright ,
+  `https://www.wiwo.de/adv/capgemini/bitcoin-technologie-unternehmen-gehen-auf-tuchfuehlung-mit-blockchain/19815578.html'.
 
-\bibitem{wiwo1}
-Wiwo:.
-\newblock
-  https://www.wiwo.de/adv/capgemini/bitcoin-technologie-unternehmen-gehen-auf-tuchfuehlung-mit-blockchain/19815578.html,
-  zuletzt besucht am 21.02.2018.
+\harvarditem{Wood}{2017}{Wood-2017}
+Wood, G.  \harvardyearleft 2017\harvardyearright , {\em Ethereum: A secure
+  decentralised generalised transaction ledger}.
 
-\bibitem{faizod1}
-Faizod:.
-\newblock https://faizod.com/studie-zum-thema-blockchain/, zuletzt besucht am:
-  20.02.2018.
+\harvarditem{Wood}{n.d.}{ETHY}
+Wood, G.  \harvardyearleft n.d.\harvardyearright , `Ethereum: A secure
+  decentralised generalised transaction ledger'.
+\newline\harvardurl{http://gavwood.com}
 
-\bibitem{FIT}
-Vincent Schlatt, André Schweizer, Nils Urbach, and Gilbert Fridgen.
-\newblock Blockchain: Grundlagen, anwendungen und potenziale.
-\newblock {\em Projektgruppe Wirtschaftsinformatik des Fraunhofer-Instituts
-  f{"u}r Angewandte Informationstechnik FIT}, 2016.
+\harvarditem{{ZEIT ONLINE GmbH}}{2018}{gd21jh}
+{ZEIT ONLINE GmbH}  \harvardyearleft 2018\harvardyearright , `{Das Gold des 21.
+  Jahrhunderts}',
+  \url{http://www.zeit.de/angebote/zukunftsfaktor-technologie/gold-21-jahrhundert}.
 
 \end{thebibliography}

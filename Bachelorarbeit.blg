@@ -8,44 +8,50 @@ Already encountered file EmptyPage.aux
  :                      }
 I'm skipping whatever remains of this command
 Already encountered file EmptyPage.aux
----line 29 of file Bachelorarbeit.aux
- : \@input{EmptyPage.aux
- :                      }
-I'm skipping whatever remains of this command
-Already encountered file EmptyPage.aux
 ---line 31 of file Bachelorarbeit.aux
- : \@input{EmptyPage.aux
- :                      }
-I'm skipping whatever remains of this command
-Already encountered file EmptyPage.aux
----line 33 of file Bachelorarbeit.aux
  : \@input{EmptyPage.aux
  :                      }
 I'm skipping whatever remains of this command
 A level-1 auxiliary file: Abkuerzungen.aux
 Already encountered file EmptyPage.aux
----line 35 of file Bachelorarbeit.aux
+---line 33 of file Bachelorarbeit.aux
  : \@input{EmptyPage.aux
  :                      }
 I'm skipping whatever remains of this command
 A level-1 auxiliary file: Einleitung.aux
 Already encountered file EmptyPage.aux
----line 37 of file Bachelorarbeit.aux
+---line 35 of file Bachelorarbeit.aux
  : \@input{EmptyPage.aux
  :                      }
 I'm skipping whatever remains of this command
 A level-1 auxiliary file: Kontextdefinition.aux
+A level-1 auxiliary file: Methodik.aux
 Already encountered file EmptyPage.aux
----line 39 of file Bachelorarbeit.aux
+---line 38 of file Bachelorarbeit.aux
  : \@input{EmptyPage.aux
  :                      }
 I'm skipping whatever remains of this command
-A level-1 auxiliary file: Methodik.aux
 A level-1 auxiliary file: Szenario.aux
+Already encountered file EmptyPage.aux
+---line 40 of file Bachelorarbeit.aux
+ : \@input{EmptyPage.aux
+ :                      }
+I'm skipping whatever remains of this command
 A level-1 auxiliary file: Implementierungsprotokoll.aux
+A level-1 auxiliary file: Evaluation.aux
+Already encountered file EmptyPage.aux
+---line 43 of file Bachelorarbeit.aux
+ : \@input{EmptyPage.aux
+ :                      }
+I'm skipping whatever remains of this command
 A level-1 auxiliary file: Konklusion.aux
+Already encountered file EmptyPage.aux
+---line 45 of file Bachelorarbeit.aux
+ : \@input{EmptyPage.aux
+ :                      }
+I'm skipping whatever remains of this command
 A level-1 auxiliary file: Anhang.aux
-The style file: unsrt.bst
+The style file: agsm.bst
 Database file #1: Literatur.bib
 Warning--entry type for "etherscan" isn't style-file defined
 --line 53 of file Literatur.bib
@@ -103,4 +109,4 @@ Warning--I didn't find a database entry for "RSADH"
 Warning--I didn't find a database entry for "priv"
 Warning--I didn't find a database entry for "floating"
 Warning--I didn't find a database entry for "soliditydocs"
-(There were 12 error messages)
+(There were 13 error messages)

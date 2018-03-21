@@ -80,7 +80,6 @@
 
 \input{solidity-highlighting}
 
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % ENDE QUELLCODE-STUFF
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -96,7 +95,7 @@
 						,plainpages = false		% notwendig wg. römischer und arabischer Seitenzahlen
 						,pdfpagelabels = false %	auch im AR zwischen ii und 2 unterscheiden!?
 					%	,implicit = false
-						,breaklinks = true		% Links umbrechen
+						,	breaklinks = true		% Links umbrechen
 						,colorlinks = true		% Links fÃ¤rben, statt umranden
 						,linkcolor  = black		% interne Links
 						,citecolor  = black		% Zitate
@@ -193,9 +192,10 @@
 	
 	% Literaturverzeichnis	
 	\nocite{*}
-	\bibliographystyle{unsrt}
+	\bibliographystyle{agsm}
+	%\bibliographystyle{xdcu}
+    % Bibtex-Datei "Literatur.bib" einbinden	
 	\bibliography{Literatur}
-	        % Bibtex-Datei "Literatur.bib" einbinden
 	%\bibliographystyle{plaindin}
 	
 	
