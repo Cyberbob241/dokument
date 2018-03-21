@@ -1,31 +1,79 @@
-\chapter{Evaluation}
+\chapter{Evaluation}	
 
-	Auf Basis der im Rahmen dieser Arbeit erlangten Erkenntnisse wird im folgenden Kapitel die Erfolgswahrscheinlichkeit der konzipierten Optimierungsmaßnahmen evaluiert, wobei insbesondere deren Realisierbarkeit \mbox{in produktiven Analyseumgebungen analysiert wird.}
+Um die Bewertungen des Szenarios und die daraus abgeleiteten Prioritätenschätzungen aus Technologie und Anwendbarkeit nachvollziehen zu können, wurden mit verschiedenen Gastronomien Experteninterviews durchgeführt, bei denen diese über das Thema Blockchain und dem Einsatz in der Gastronomie befragt und darüber hinaus qualitative Fragen zu den einzelnen Einflussfaktoren entsprechend der Anwendbarkeit und dem Nutzen
+beantworteten. Die Experteninterviews dienen somit auch zur Plausibilitätsprüfung des generierten Modells und der subjektiven Bewertungen der Befragten. Damit kann überprüft werden, ob das Modell gültig, in der
+vorliegenden Form annehmbar und nachvollziehbar ist \cite{Glaeser2010}. 
 
-	\section{Erfolgswahrscheinlichkeit der Detektionmethoden}\label{sec:wkt}
-	
-		Basierend auf den Resultaten der in Kapitel \ref{cha:Virtualisierung} erarbeiteten Verfahren muss die Realisierung einer exhaustive Detektionsprävention aufgrund der hohen Diversität und Heterogenität potentieller Virtualisierungs-Indikatoren als kaum umsetzbar konstatiert werden. Insbesondere bei der kombinierten Verwendung verschiedener Detektionstechniken können belastbare Informationen über die eingesetzte Systemumgebung deduziert werden, was final in der Identifikation von präsenten Hypervisor-Realisierungen resultiert. Aus der Perspektive des Malware-Autors wird die Implementierung von Detektionsmethoden lediglich durch die intentionale Minimierung des quantitativen Malware-Profiles limitiert. Um die weitestgehende Verdecktheit bei Ausführung und Distribution der Binaries garantieren zu können, werden häufig besonders erfolgversprechende Detektionsvektoren mit vergleichsweise geringem Implementierungsaufwand kombiniert.
-		Triviale Methoden zur Identifikation virtueller Systeme, welche primär auf der Examination leicht manipulierbarer Systemparameter wie MAC-Adressen basieren, werden innerhalb dedizierter Analyseumgebungen unter Verwendung entsprechender Systemkonfigurationen meist automatisiert oder durch manuelle Rekonfiguration verhindert. 
-		Die Malware-Binaries implementieren daher häufig ausgewählte Spezialfälle, wobei die Integrität der im Detektionskontext instrumentalisierten Attribute  oftmals essentiell für die korrekte Funktionalität der virtualisierten Systemumgebung ist. Auf diese Weise können manuelle Modifikationen, beispielsweise durch einen Analysten, weitestgehend ausgeschlossen werden. Exemplarisch sei an dieser Stelle auf die Treibersignaturen emulierter Hardware-Komponenten verwiesen, welche häufig kompromittierende Namensattribute enthalten. Da die emulierte Treiberfunktionalität zur Interaktion mit der verwendeten Hypervisor-Lösung jedoch obligatorisch ist, erweisen sich umfangreiche Modifikationen zur Verschleierung des virtuellen Charakters aufgrund der systeminternen Komplexität häufig als kaum realisierbar.\\
-		\noindent Unter Berücksichtigung der zunehmenden Expansion in der produktiven Nutzung von virtualisierten Systemen verzichten einige Malware-Implementierungen bewusst auf die Detektion des virtuellen Systemkontextes, um den Umfang potentiell relevanter Zielsysteme nicht zu limitieren \textcolor{red}{[11]}. 
-		%Quelle: https://books.google.de/books?id=hrSoCAAAQBAJ&pg=PA17&lpg=PA17&dq=less+vm+detection&source=bl&ots=KqJDeb-Nho&sig=YFe6waQMlr4Qhd1gvDu72OlBQBY&hl=de&sa=X&ved=0ahUKEwjP-rOZ5OzZAhXMjSwKHdzNCUkQ6AEIUTAF#v=onepage&q=gain%20popul&f=false 
-		Um dennoch die Examination der Malware innerhalb dedizierter Analyseumgebungen obstruieren zu können, wird anstelle der Virtualisierungs-Parameter die Detektion von Indikatoren der stark spezialisierten Analyseumgebungen forciert. Dieser Prozess kann beispielsweise durch die gezielte Identifikation von speziellen Debugger- und Analyseprozessen sowie kompromittierenden Namensattributen einzelner Systemdateien realisiert werden. Die verwendeten Konzepte sind dabei grundlegend kongruent zum Vorgehen bei der Erkennung virtueller Systeme, weshalb auch in diesem \makebox[\linewidth][s]{Kontext eine potentiell hohe Detektionswahrscheinlichkeit konstatiert werden muss.}
+\section{Durchführung der Interviews}
+
+Die Frageformulierung und der Aufbau des Fragebogens erfolgen in Form
+eines strukturierten Leitfrageninterviews. Dabei wurden die wichtigsten Themen als Fragen formuliert, aber bewusst Raum für tiefer gehende Fragen gelassen. Die nachfolgende Tabelle \ref{TabelleFragen} zeigt die vordefinierten Themen, die das Interview behandelt und auf welche näher eingegangen werden kann. 
+
+\begin{table}[h]
+	\caption{Themen für die Experteninterviews}		
+	\renewcommand{\arraystretch}{1.2}
+	\begin{center} 
+		\begin{tabular}{| p{5cm} | p{7cm} |}
+			
+			\hline
+			\textbf{Blockchain}	& Grundlagen Blockchain \\
+			& kryptografischer Hintergrund \\
+			& Wissenstand Kryptowährung \\
+			\hline
+			
+			\textbf{derzeitige Situation} 	& Durchführung Bestellvorgang\\
+			& Abwicklung Bezahlung \\
+			& Abrechnung nach Bezahlung \\
+			& Trinkgeld \\
+			& Webauftritt \\
+			\hline	
+			
+			\textbf{Szenario}	& Vorstellung des Szenario \\
+			& Änderung am System \\
+			& Vor-/Nachteile\\
+			& Anwendbarkeit für Betrieb\\
+			
+			\hline
+			
+			
+		\end{tabular}
+	\end{center}
+	\label{TabelleFragen}		
+\end{table}
+
+\noindent In besonderem Maße sind die Antworten zum Thema der Anwendbarkeit wichtig für die Auswertung, weshalb dort auf eine detaillierte Begründung Wert gelegt wird.\\
+Folgende Betriebe im Bereich Gastronomie wurden befragt:
+
+\begin{itemize}
+	\item Unicasino Unibw, Neubiberg
+	\item Taverne Artemis, Ottobrunn
+	\item Die 2, Neubiberg
+	\item La Ciacolada, Neubiberg
+	\item Santorini, Naumburg
+	\item Landgasthof alter Bahnhof, Rohrberg
+\end{itemize}
+
+Alle Betriebe befinden sich in Dörfern oder Kleinstädten. Während \textit{Die 2} hauptsächlich als Bar dient und das \textit{Unicasino} eine separate Bar besitzt, sind die restliche 4 Gastronomien ausschließlich Gaststätten beziehungsweise Restaurants. Über Kundenzahl und Umsatz sind keine Informationen bekannt.\\
+Nachdem alle Daten erhoben wurde, wurde eine Reduktion auf die wichtigsten Aussagen getroffen, welche weiter untersucht werden. Beim Thema Blockchain fiel sofort auf, dass es eine starke Diversifikation im Wissenstand der Befragten gab. Während die Betreiber von \textit{Die 2} ein etwas umfangreicheres Wissen über Blockchain und Kryptowährungen besaßen, einer von ihnen beschäftigt sich auch mit der Kryptowährung Ethereum, interessiert die Befragten des \textit{Unicasinos} und der Taverne \textit{Artemis} das Thema ein wenig und sie verstehen die Blockchain im groben. die restlichen 3 Betriebe haben nur durch Nachrichten die Begriffe schon einmal gehört. Alle sechs Betriebe assoziierten den Begriff der Blockchain fast ausschließlich nur mit Kryptowährungen und spekulativen Investments. Eine große Gemeinsamkeit aller Betriebe ist die derzeitige Situation in Bezug auf Bestellung, Bezahlung und der Abwicklung von Rechnungen. Die Bestellung läuft durch einen Kellner, der persönlich an den Tisch geht und die Kunden nach ihren Wünschen fragt. Dabei wird eine Speisekarte in Form eines Buches oder einzelnen Blattes dem Kunden überreicht, indem die möglichen Speisen und Getränke inklusive ihrer Preise stehen. Niemand nutzt digitale Produkte für ihre Bestellung oder die Anzeige von Sonderangeboten. Die Bezahlung erfolgt mittels Bargeld oder auf Wunsch per EC-Karte. Laut den Aussagen der Betreiber bevorzugen jüngere Menschen häufiger den Bezahlvorgang mittels EC-Karte. Diese Aussage ist aber nicht nachgewiesen, sondern nur das Empfinden der Befragten. Beim Thema Webauftritt wissen alle Befragten um die Bedeutung und Wichtigkeit. Allerdings besitzen nur 4 Betriebe eine eigene Website. Das \textit{Santorini} und der \textit{Landgasthof alter Bahnhof} haben nur eine kurze Beschreibung auf Drittanbietern. Bei der Beschreibung des Szenarios konnten sich alle Betriebe in die Situation hineinversetzen. Allerdings konnten nur das \textit{Unicasino} und \textit{Die 2} technisch folgend und das Konzept wirklich verstehen. Für die restlichen vier Betriebe war es ein System für die ferne Zukunft. Ein weiterer Aspekt für die meisten, der gegen einen Einsatz sprach, war die geringe Nutzung der Blockchain für echte Transaktionen. Da in ihrem Empfinden der Hauptaugenmerk auf die Spekulation von Währungen lag, würden wenig Kunden das System zum Bezahlen nutzen wollen. \textit{Die 2} und die \textit{Taverne Artemis} finden das Konzept für Werbezwecke sinnvoll, wenn es kostengünstig ist. Das \textit{Unicasino} hält es nicht für umsetzbar, da es weder einen produktiven Beitrag leistet und noch einen effektiven Nutzen bringt. Die restlichen drei Betriebe halten die Umsetzung zwar für möglich, aber den Einsatz nicht für sinnvoll, nicht mal zu Werbezwecken.\\
+
+\noindent Abschließend kann man sagen, dass das Thema einer breiten Masse der Bevölkerung bekannt ist. Allerdings kennen sich gerade in ländlichen Gebieten zu wenig wirklich mit der Technologie und dem Konzept der Blockchain aus. Die Befragten wurden bewusst aus Bevölkerungsarmen Gegenden gezogen um ein gewisses Maß an Vergleichbarkeit zu ermöglichen. Auf Grundlage dieser Ergebnisse können weitere Untersuchungen hinsichtlich einer quantitative Analyse zum Wissenstand über Blockchain durchgeführt werden.
+
+
 		
+	\section{Risikoanalyse}
 	
-	\section{Realisierbarkeit der Optimierungsansätze}
-	
-		\textcolor{red}{Ostendorff}
-	
-		- Aleatorische Evasionstechniken von Malware (Click-Trigger, Reboot-Trigger) kaum deterministisch emulierbar\\
-	
-		\noindent - Komplexität von tiefgreifenden Modifikationen wie Entropie-Manipulation\\
+		In diesem Abschnitt erfolgt eine kurze Risikoanalyse des Projektes. Es werden wichtige und realistische Risiken beleuchtet und kurz bewertet. Zunächst werden Risiken betrachtet, welche innerhalb des Betriebs auftreten können. Das erste Risiko stellt dabei die Bereitschaft der Kunden dar. Durch den veränderten Bestell- und Bezahlvorgang müssen sich alle Kunden anpassen. In der Anfangsphase stellt dies für den Kunden sowohl eine erhöhte technische Herausforderung für den Vorgang dar, als auch ein erhöhter Zeitaufwand. Da die Bestellung nun über eine Weboberfläche abläuft, muss diese zuerst mit einem mobilen Gerät aufgerufen werden und danach die gewünschten Produkte ausgewählt und bestätigt werden. Dies stellt für viele, besonders ältere Menschen, eine Hürde, da sie mit dem herkömmlichen Bestellvorgang über einen Kellner vertraut sind und es für den Kunden weniger aufwendig ist. Um dieses Risiko zu minimieren, ist ein möglichst einfach gehaltenes Design zu verwenden. Auch könnte der Betreiber in der Anfangsphase für die Kunden das Produkt gemeinsam bedienen, damit sich die Kunden mit dem System vertraut machen können. Eine Möglichkeit, den Kellner bei Fragen zur Bedienung des Systems zu rufen, sollte eingerichtet sein. Ein nächster möglicher Schwachpunkt ist der Verlust des Kontaktes zum Kunden. Da die Bestellung und die Bezahlung nun online durchgeführt wird, sieht der Kunde den Kellner nur noch beim Bringen der Produkte. Dies kann zur Verminderung der Identifikation zum Geschäft führen. Außerdem können die Kellner keine Vorschläge mehr geben oder auf besondere Wünsche der Kunden eingehen. Dieses Risiko kann dadurch gemindert werden, dass der Kellner zusätzlich um die einzelnen Tische herum geht und den Kontakt zum Kunden sucht. Dies vermindert allerdings den Vorteil, dass sich der Kellner voll auf seine Tätigkeiten wie das Mixen und Bringen von Getränken konzentrieren kann. \\
+		Als nächstes wird die technische Sichtweise betrachtet und die dortigen Risiken aufgezeigt. Das größte Risiko ist dort die Abhängigkeit vom Internet und Server. Ohne eine funktionierende Internetverbindung ist der Webserver nicht erreichbar, wodurch keine Bestellungen abgewickelt werden können. Des Weiteren muss der Server voll funktionsfähig sein und auch vor Angriffen und Schwachstellen geschützt werden. Dieses Risiko kann zu einem Stopp des Bestellungsvorgang führen, was dem Betrieb schadet. Es kann allerdings einfach behoben werden, indem der Betrieb auch weiterhin ohne Abhängigkeit von der Blockchain durchführbar ist und somit eine Backup-Lösung vorhanden ist. \\
+		Die nächsten Punkte befassen sich mit externen Einflüssen auf das Projekt. Ein bedeutender Einfluss ist die Bekanntheit des Themas Blockchain. Durch die ständigen Nachrichten in letzter Zeit ist das Thema sehr in den Fokus der Medien gerückt \cite{wiwo2} und damit auch für viele Kunden ein möglicher Grund, das Geschäft allein aufgrund des Produktes besuchen zu wollen. Sollte der Trend um das Thema abschwächen, so werden sich auch weniger Menschen für die Blockchain und ihre Produkte interessieren. Damit ist das Produkt sehr abhängig von der gesamten Entwicklung der Blockchain. Das letzte hier betrachtete Risiko ist der Einfluss von Staaten und anderen Organisationen. Regulierungen auf die Blockchain werden seit dem Jahr 2018 mehr und mehr diskutiert \cite{Kaulartz}. Diese Regularien können zur Folge haben, dass eine große Bürokratische Hürde für kleinere Geschäfte gelegt wird, die den Nutzen des Produktes abschwächt und damit unrentabel macht. Allerdings können Regulierungen auch zu einen breiten Akzeptanz führen, da einheitliche Prozesse und Richtlinien für den Umgang mit der Blockchain eingeführt werden. Staatliches Eingreifen in das Thema ist abschließend schwer abzuschätzen und damit sollte es für die Risikobewertung vorläufig vernachlässigt werden. Es bedarf weiterer Untersuchungen und erste Entscheidungen von staatlichen Organisationen um den Einfluss korrekt beurteilen zu können. \\
 		
-		\noindent - Verfahren liefern theoretische Ansätze, hohe Komplexität in \\
-		  realitätsnahen Anwendungsszenarien\\
-		  
-		\noindent Modifikationen der Analyseumgebungen induzieren wiederum Anomalien, die durch Malware-Implementierung detektierbar. Exemplarisch systeminterne Reduktion Entropie auf Minimalsatz referenziert, suboptimale Realisierung ermöglicht Detektion virtualisierter Analyseumgebung durch Testroutinen innerhalb der Malware. \\\\
-		  
-		 \noindent ==> hoher Aufwand potentiell tiefgreifender Systemmodikfikationen , exhaustive Prävention nicht möglich, kontinuierliche Adaption neuer Detektionstechniken erforderlich, induzieren neue Ansätze zur Realisierung Detektionsmechanismen \textcolor{blue}{<TXT>}
-		 
-		 
-		 Insbesondere Automatisierung oftmals kritisch. 
+		\noindent Abschließend zeigt die Grafik \ref{swot} eine SWOT-Analyse des Szenarios. Die SWOT-Analyse (Akronym für Strengths, Weaknesses, Opportunities und Threats) ist ein Instrument der strategischen Planung und dient der strukturierten Zusammenfassung der wichtigsten Aspekte eines Produktes \mbox{hinsichtlich dessen Position im wirtschaftlichen Kontext.}\\
+		
+		\begin{figure}[h!]
+			\begin{center}
+				\includegraphics[width=0.9\textwidth]{Bilder/swot_analyse.png}
+				\caption[SWOT-Analyse der Protolösung]{SWOT-Analyse der Protolösung}
+				\label{swot}
+			\end{center}
+		\end{figure}
+	
+	

@@ -1,0 +1,106 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: Bachelorarbeit.aux
+A level-1 auxiliary file: Titelseite.aux
+A level-1 auxiliary file: EmptyPage.aux
+A level-1 auxiliary file: Abstract.aux
+Already encountered file EmptyPage.aux
+---line 28 of file Bachelorarbeit.aux
+ : \@input{EmptyPage.aux
+ :                      }
+I'm skipping whatever remains of this command
+Already encountered file EmptyPage.aux
+---line 29 of file Bachelorarbeit.aux
+ : \@input{EmptyPage.aux
+ :                      }
+I'm skipping whatever remains of this command
+Already encountered file EmptyPage.aux
+---line 31 of file Bachelorarbeit.aux
+ : \@input{EmptyPage.aux
+ :                      }
+I'm skipping whatever remains of this command
+Already encountered file EmptyPage.aux
+---line 33 of file Bachelorarbeit.aux
+ : \@input{EmptyPage.aux
+ :                      }
+I'm skipping whatever remains of this command
+A level-1 auxiliary file: Abkuerzungen.aux
+Already encountered file EmptyPage.aux
+---line 35 of file Bachelorarbeit.aux
+ : \@input{EmptyPage.aux
+ :                      }
+I'm skipping whatever remains of this command
+A level-1 auxiliary file: Einleitung.aux
+Already encountered file EmptyPage.aux
+---line 37 of file Bachelorarbeit.aux
+ : \@input{EmptyPage.aux
+ :                      }
+I'm skipping whatever remains of this command
+A level-1 auxiliary file: Kontextdefinition.aux
+Already encountered file EmptyPage.aux
+---line 39 of file Bachelorarbeit.aux
+ : \@input{EmptyPage.aux
+ :                      }
+I'm skipping whatever remains of this command
+A level-1 auxiliary file: Methodik.aux
+A level-1 auxiliary file: Szenario.aux
+A level-1 auxiliary file: Implementierungsprotokoll.aux
+A level-1 auxiliary file: Konklusion.aux
+A level-1 auxiliary file: Anhang.aux
+The style file: unsrt.bst
+Database file #1: Literatur.bib
+Warning--entry type for "etherscan" isn't style-file defined
+--line 53 of file Literatur.bib
+Warning--entry type for "bafin" isn't style-file defined
+--line 107 of file Literatur.bib
+Warning--entry type for "BC-Wiki" isn't style-file defined
+--line 135 of file Literatur.bib
+Warning--entry type for "kcur" isn't style-file defined
+--line 150 of file Literatur.bib
+Warning--entry type for "BC" isn't style-file defined
+--line 158 of file Literatur.bib
+Warning--entry type for "BCS" isn't style-file defined
+--line 166 of file Literatur.bib
+Warning--entry type for "PoW" isn't style-file defined
+--line 173 of file Literatur.bib
+Warning--entry type for "CC" isn't style-file defined
+--line 180 of file Literatur.bib
+Warning--entry type for "ETHW" isn't style-file defined
+--line 187 of file Literatur.bib
+Warning--entry type for "ETHY" isn't style-file defined
+--line 194 of file Literatur.bib
+Warning--entry type for "ETHT" isn't style-file defined
+--line 201 of file Literatur.bib
+Warning--entry type for "ETHE" isn't style-file defined
+--line 208 of file Literatur.bib
+Warning--entry type for "star" isn't style-file defined
+--line 215 of file Literatur.bib
+Warning--entry type for "mesh" isn't style-file defined
+--line 222 of file Literatur.bib
+Warning--entry type for "kh" isn't style-file defined
+--line 229 of file Literatur.bib
+Warning--entry type for "shamd" isn't style-file defined
+--line 236 of file Literatur.bib
+Repeated entry---line 245 of file Literatur.bib
+ : @misc{wiwo1
+ :            ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 251 of file Literatur.bib
+ : @misc{faizod1
+ :              ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 257 of file Literatur.bib
+ : @article{Stelzer2002
+ :                     ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 264 of file Literatur.bib
+ : @misc{wiwo2
+ :            ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 270 of file Literatur.bib
+ : @misc{Kaulartz
+ :               ,
+I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "RSADH"
+Warning--I didn't find a database entry for "priv"
+Warning--I didn't find a database entry for "floating"
+Warning--I didn't find a database entry for "soliditydocs"
+(There were 12 error messages)

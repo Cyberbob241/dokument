@@ -1,0 +1,36 @@
+\BOOKMARK [1][-]{chapter*.4}{Tabellenverzeichnis}{}% 1
+\BOOKMARK [1][-]{chapter*.5}{Listings}{}% 2
+\BOOKMARK [1][-]{section*.6}{Abk\374rzungsverzeichnis}{}% 3
+\BOOKMARK [0][-]{chapter.1}{Einleitung}{}% 4
+\BOOKMARK [1][-]{section.1.1}{Motivation}{chapter.1}% 5
+\BOOKMARK [1][-]{section.1.2}{Aufbau des Dokumentes}{chapter.1}% 6
+\BOOKMARK [0][-]{chapter.2}{Grundlagen der Blockchain-Technologie}{}% 7
+\BOOKMARK [1][-]{section.2.1}{Kryptographische Hashfunktionen}{chapter.2}% 8
+\BOOKMARK [1][-]{section.2.2}{Dezentralisierte Netzwerkstrukturen}{chapter.2}% 9
+\BOOKMARK [1][-]{section.2.3}{Asymmetrische Kryptographie}{chapter.2}% 10
+\BOOKMARK [1][-]{section.2.4}{Kryptow\344hrungen}{chapter.2}% 11
+\BOOKMARK [2][-]{subsection.2.4.1}{Bitcoin}{section.2.4}% 12
+\BOOKMARK [2][-]{subsection.2.4.2}{Ethereum}{section.2.4}% 13
+\BOOKMARK [2][-]{subsection.2.4.3}{Vergleich der exemplarischen Konzepte}{section.2.4}% 14
+\BOOKMARK [0][-]{chapter.3}{Methodisches Vorgehen}{}% 15
+\BOOKMARK [1][-]{section.3.1}{Methodische Grundlagen der Interviews}{chapter.3}% 16
+\BOOKMARK [1][-]{section.3.2}{Projektmanagement-Werkzeug Trello}{chapter.3}% 17
+\BOOKMARK [1][-]{section.3.3}{Risikoanalyse}{chapter.3}% 18
+\BOOKMARK [0][-]{chapter.4}{Szenariodefinition}{}% 19
+\BOOKMARK [1][-]{section.4.1}{Betriebswirtschaftliche Kontextualisierung}{chapter.4}% 20
+\BOOKMARK [1][-]{section.4.2}{Fallbeispiel: Whoppercoin Burger King}{chapter.4}% 21
+\BOOKMARK [1][-]{section.4.3}{Use Cases im Gastronomie-Kontext}{chapter.4}% 22
+\BOOKMARK [2][-]{subsection.4.3.1}{Perspektive: Kunde}{section.4.3}% 23
+\BOOKMARK [2][-]{subsection.4.3.2}{Perspektive: Betreiber}{section.4.3}% 24
+\BOOKMARK [0][-]{chapter.5}{Implementierungsprotokoll Demonstrator-App}{}% 25
+\BOOKMARK [1][-]{section.5.1}{Aufbau}{chapter.5}% 26
+\BOOKMARK [1][-]{section.5.2}{Smart-Contracts}{chapter.5}% 27
+\BOOKMARK [2][-]{subsection.5.2.1}{Entscheidungen f\374r das User Interface}{section.5.2}% 28
+\BOOKMARK [0][-]{chapter.6}{Evaluation}{}% 29
+\BOOKMARK [1][-]{section.6.1}{Durchf\374hrung der Interviews}{chapter.6}% 30
+\BOOKMARK [1][-]{section.6.2}{Risikoanalyse}{chapter.6}% 31
+\BOOKMARK [0][-]{chapter.7}{Konklusion}{}% 32
+\BOOKMARK [1][-]{section.7.1}{Zusammenfassung}{chapter.7}% 33
+\BOOKMARK [1][-]{section.7.2}{Ausblick}{chapter.7}% 34
+\BOOKMARK [0][-]{Anhang.a.A}{Anhang Transkript der Interviews}{}% 35
+\BOOKMARK [0][-]{chapter*.21}{Literaturverzeichnis}{}% 36

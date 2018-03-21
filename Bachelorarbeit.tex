@@ -2,7 +2,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                                              %
 %                                 Bachelorarbeit                               %
-%                        Universität der Bundeswehr München                    %
+%                        UniversitÃ¤t der Bundeswehr MÃ¼nchen                    %
 %                                                                              %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -13,19 +13,20 @@
 							 ,bibliography=totoc 	% Literaturverzeichnis ins Inhaltsverzeichnis aufnehmen
 							 ]
 %							 {scrartcl} 					% erlaubt "section", "subsection", ...
-							 {scrreprt} 					% statt scrartcl, zusätzliche Gliederungsebene "chapter"
+							 {scrreprt} 					% statt scrartcl, zusÃ¤tzliche Gliederungsebene "chapter"
 							 
 \usepackage[ngerman]{babel}		% Neue Rechtschreibung verwenden 
 \usepackage[latin1]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage{lmodern}					% Hübschere Schriftart als Standard
+\usepackage{lmodern}					% HÃ¼bschere Schriftart als Standard
 \usepackage{microtype}				% Verbesserter Textsatz
 
 \usepackage{graphicx} 				% Bilder einbinden
 \usepackage{tabularx} 				% Tabellen mit definierbarer Breite
 \newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}} % zentriert mit Breitenangabe
-\usepackage{booktabs}					% hübschere Tabellen
+\usepackage{booktabs}					% hÃ¼bschere Tabellen
 \usepackage{xcolor}
+\usepackage{subfig}
 \usepackage{multirow}
 \usepackage{caption}
 \usepackage{longtable}
@@ -63,7 +64,7 @@
 	numbers=left,
 	numbersep=-10pt,               
 	numberstyle=\tiny\color{black},
-	xleftmargin=0.31em,
+	xleftmargin=0.35em,
 	xrightmargin=-0.235em,
 	tabsize=4,
 	emph={VMware,Virtual,Platform,Inc,computer-vm,Icon,name,Virtualization,Chassis,vmware,computer,vm},
@@ -77,6 +78,7 @@
 \captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white}
 
 
+\input{solidity-highlighting}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -88,19 +90,20 @@
 
 % Links im fertigen PDF erstellen
 \usepackage[% hyperref immer als letztes (!) Paket einbinden!						
-						pdfauthor={Marcel Antzek}
-						,pdfsubject={Bachelorarbeit}
-						,pdftitle={Evaluation und Implementierung versteckter Kanäle in IP-basierten Protokollen im Kontext von Malware C\&C-Verkehr}
+						pdfauthor={Gruppe Blockchain}
+						,pdfsubject={Projektarbeit}
+						,pdftitle={Test}
 						,plainpages = false		% notwendig wg. römischer und arabischer Seitenzahlen
 						,pdfpagelabels = false %	auch im AR zwischen ii und 2 unterscheiden!?
 					%	,implicit = false
 						,breaklinks = true		% Links umbrechen
-						,colorlinks = true		% Links färben, statt umranden
+						,colorlinks = true		% Links fÃ¤rben, statt umranden
 						,linkcolor  = black		% interne Links
 						,citecolor  = black		% Zitate
 						,menucolor  = black		% Links im Inhaltsverzeichnis
-						,urlcolor   = black		% URLs blau färben (blue)
+						,urlcolor   = black		% URLs blau fÃ¤rben (blue)
 					]{hyperref}
+%
 
 
 
@@ -123,22 +126,29 @@
 	\tableofcontents
 	\newpage
 	
+	\noindent\begin{minipage}[b][20.cm]{\textwidth}
+		\listoffigures
+		\vspace*{-1cm}
+		\listoftables
+		\addcontentsline{toc}{section}{Tabellenverzeichnis}
+		\vspace*{-1cm}
+		\lstlistoflistings
+		\addcontentsline{toc}{section}{Listings}		
+	\end{minipage}
 
 	% Abbildungsverzeichnis
-	\listoffigures
-	
-
+	%\listoffigures
 	% Tabellenverzeichnis
-	\include{EmptyPage}
-	\listoftables
-	\addcontentsline{toc}{section}{Tabellenverzeichnis}
+	%\include{EmptyPage}
+	%\listoftables
+	%\addcontentsline{toc}{section}{Tabellenverzeichnis}
 
-	%Listings-Übersicht
-	\include{EmptyPage}
-	\lstlistoflistings
-	\addcontentsline{toc}{section}{Listings}
+	%Listings-Ãœbersicht
+	%\include{EmptyPage}
+	%\lstlistoflistings
+	%\addcontentsline{toc}{section}{Listings}
 
-	% Abkürzungen
+	% AbkÃ¼rzungen
 	\include{EmptyPage}
 	\include{Abkuerzungen}
 	
@@ -153,24 +163,28 @@
 	
 	% Kontextdefinition
 	\include{Kontextdefinition}
-	\include{EmptyPage}
+	%\include{EmptyPage}
 	
 	% Methodik
 	\include{Methodik}
 	
+	\include{EmptyPage}
 	\include{Szenario}
 	
+	\include{EmptyPage}
 	\include{Implementierungsprotokoll}
 	
 	% Evaluation
-	%\include{Evaluation}
+	\include{Evaluation}
 	
 	% Ergebnisdiskussion
 	%\include{Diskussion}
 	
 	% Konklusion
+	\include{EmptyPage}
 	\include{Konklusion}
 	
+	\include{EmptyPage}
 	\begin{appendices}
 		\renewcommand\chaptername{Appendix}
 		\include{Anhang}
@@ -189,8 +203,3 @@
 %	\thispagestyle{empty}
 
 \end{document}
-
-% Quellen:
-% [0]: https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Publikationen/Lageberichte/Lagebericht2016.pdf;jsessionid=E4F12AF765F2552CC408B38D56EE4E4C.1_cid360?__blob=publicationFile&v=5
-% [1]: http://www.tagesspiegel.de/wirtschaft/cyberkriminalitaet-verfassungsschutz-und-wirtschaft-schlagen-alarm-50-milliarden-schaden/19730102.html
-% [2]: https://www.esg.de/unternehmen/

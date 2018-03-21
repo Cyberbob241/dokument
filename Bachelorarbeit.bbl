@@ -1,0 +1,172 @@
+\begin{thebibliography}{10}
+
+\bibitem{gd21jh}
+{ZEIT ONLINE GmbH}.
+\newblock {Das Gold des 21. Jahrhunderts}.
+\newblock
+  \url{http://www.zeit.de/angebote/zukunftsfaktor-technologie/gold-21-jahrhundert},
+  Stand:Februar. 2018.
+
+\bibitem{kwrank}
+{Statista GmbH}.
+\newblock {Die Top 10 der Kryptow{"a}hrungen}.
+\newblock
+  \url{https://de.statista.com/infografik/1939/marktkapitalisierung-von-kryptowaehrungen/},
+  Stand:Februar. 2018.
+
+\bibitem{Block}
+Konstantinos Christidis and Michael Devetsikiotis.
+\newblock Blockchains and smart contracts for the internet of things.
+\newblock {\em IEEE}, 2016.
+
+\bibitem{bafin}
+Bundesanstalt f{"u}r Finanzdienstleustungsaufsicht.
+\newblock Blockchain-technologie, 2017.
+
+\bibitem{kh}
+Elektronik Kompendium.
+\newblock Kryptografische hash-funktionen.
+
+\bibitem{shamd}
+Elektronik Kompendium.
+\newblock Sha und md.
+
+\bibitem{star}
+Wiki Commens.
+\newblock Network topology star.
+
+\bibitem{mesh}
+Wiki Commens.
+\newblock Network topology mesh.
+
+\bibitem{stallings}
+William Stallings.
+\newblock {\em Network Security Essentials: Applications and Standards}.
+\newblock Prentice Hall Press, 2010.
+
+\bibitem{badev}
+Anton Badev and Matthew Chen.
+\newblock Bitcoin: Technical background and data analysis, 2014.
+
+\bibitem{franco}
+Pedro Franco.
+\newblock {\em Understanding Bitcoin: Cryptography, Engineering, and
+  Economics}.
+\newblock John Wiley and Sons, Ltd, 2014.
+
+\bibitem{kcur}
+Annalee McWilliams.
+\newblock Bitcoin, ethereum und co.: Kryptow{"a}hrungen einfach erkl{"a}rt,
+  2017.
+
+\bibitem{BITB}
+Vincenzo Morabito.
+\newblock {\em Business Innovation Through Blockchain}.
+\newblock Springer Verlag, 2017.
+
+\bibitem{BC-Wiki}
+Bitcoin-Wiki.
+\newblock Bitcoin-wiki.
+
+\bibitem{BC}
+Satoshi Nakamoto.
+\newblock Bitcoin: A peer-to-peer electronic cash system, 2008.
+
+\bibitem{BCS}
+blockchain.info.
+\newblock Bitcoin blockchain size.
+
+\bibitem{PoW}
+Bitcoin-Wiki.
+\newblock Proof-of-work.
+
+\bibitem{CC}
+Chjango Unchained.
+\newblock Consensus compare: Tendermint bft vs. eos dpos.
+
+\bibitem{ETHW}
+Vitalik Buterin.
+\newblock A next-generation smart contract and decentralized application
+  platform.
+
+\bibitem{ETHY}
+Gavin Wood.
+\newblock Ethereum: A secure decentralised generalised transaction ledger.
+
+\bibitem{ETHT}
+Stephan Tual.
+\newblock Ethereum launches.
+
+\bibitem{ETHE}
+Ethereumkaufen.
+\newblock Ethereum zukunft: Der ethereum fahrplan.
+
+\bibitem{Stelzer2002}
+Dirk Stelzer.
+\newblock Risikoanalysen als hilfsmittel zur entwicklung von
+  sicherheitskonzepten in der informationsverarbeitung.
+\newblock {\em ITSicherheitsmanagement in Banken.}, 2002.
+
+\bibitem{wiwo2}
+Wiwo:.
+\newblock
+  http://blog.wiwo.de/look-at-it/2017/11/16/8-von-10-unternehmen-kennen-blockchain-aber-nur-7-prozent-halten-technologie-fuer-marktreif/,
+  zuletzt besucht am 04.03.2018.
+
+\bibitem{Kaulartz}
+Markus Kaulartz.
+\newblock
+  https://causa.tagesspiegel.de/wirtschaft/wie-weiter-mit-den-bitcoins/ein-bisschen-regulierung-reicht-schon.html,
+  zuletzt besucht am: 04.03.218.
+
+\bibitem{Glaeser2010}
+Jochen Gl{"a}ser.
+\newblock {\em Experteninterviews und qualitative Inhaltsanalyse}.
+\newblock Springer, 2010.
+
+\bibitem{soliditydoc}
+Ethereum.
+\newblock {\em Solidity Documentation}, 2017.
+
+\bibitem{Wood-2017}
+Gavin Wood.
+\newblock {\em Ethereum: A secure decentralised generalised transaction
+  ledger}, 2017.
+
+\bibitem{EthWP-2017}
+Ethereum~White Paper.
+\newblock {\em Ethereum White Paper}, 2017.
+
+\bibitem{Nielsen:1999:DWU:519216}
+Jakob Nielsen.
+\newblock {\em Designing Web Usability: The Practice of Simplicity}.
+\newblock New Riders Publishing, Thousand Oaks, CA, USA, 1999.
+
+\bibitem{etherscan}
+Etherscan.
+\newblock The ethereum block explorer, 2018.
+
+\bibitem{Dannen-2017}
+Chris Dannen.
+\newblock {\em Introducing Ethereum and Solidity: Foundations of Cryptocurrency
+  and Blockchain Programming for Beginners}.
+\newblock Apress, Berkely, CA, USA, 1st edition, 2017.
+
+\bibitem{wiwo1}
+Wiwo:.
+\newblock
+  https://www.wiwo.de/adv/capgemini/bitcoin-technologie-unternehmen-gehen-auf-tuchfuehlung-mit-blockchain/19815578.html,
+  zuletzt besucht am 21.02.2018.
+
+\bibitem{faizod1}
+Faizod:.
+\newblock https://faizod.com/studie-zum-thema-blockchain/, zuletzt besucht am:
+  20.02.2018.
+
+\bibitem{FIT}
+Vincent Schlatt, André Schweizer, Nils Urbach, and Gilbert Fridgen.
+\newblock Blockchain: Grundlagen, anwendungen und potenziale.
+\newblock {\em Projektgruppe Wirtschaftsinformatik des Fraunhofer-Instituts
+  f{"u}r Angewandte Informationstechnik FIT}, 2016.
+
+\end{thebibliography}

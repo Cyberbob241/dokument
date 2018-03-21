@@ -6,9 +6,9 @@
 		Die Berechnungen der Smart-Contracts werden innerhalb einer Virtuellen-Maschine bei den Minern ausgeführt. Als Ausgleich bezahlt der Absender einer Transaktion einen kleinen Betrag. 
 		Es kann angenommen werden, dass beim Bezahlen einer Gebühr von ca. 15 Cent (Stand Januar 2018) die Transaktion innerhalb einer Minute von der Ethereum-Blockchain verarbeitet wird. Diese Gebühr ist Abhänig von der Anzahl der Speicher- und Rechenoperationen. Deshalb sollte der Zustand einer Variable auf der Blockchain nur dann verändert werden, wenn dies auch wirklich nötig ist. 
 		
-		Im folgenden Kapitel wird die Implementierung einer DApp beschrieben, also einer Decentralized Application. Decentraliczed Applications bieten eine Schnittstelle zwischen Blockchain und Anwender. Nicht immer ist die Interaktion mit Smart-Contracts für den Nutzer durch ein Wallet intentional oder übersichtlich. Es ist möglich, dass Datentypen falsch verwendet werden und der Nutzer im schlimmsten Fall finanziellen Schaden nimmt. Deshalb bieten DApps eine grafische Benutzeroberfläche, die Beispielsweise auf einem Webserver zur Verfügung gestellt wird. So können auch unerfahrene Nutzer ohne technisches Vorwissen mit der DApp interagieren. Durch Wallets wie MetaMask kann eine Verbindung zwischen dem Ethereum-Account und der DApp hergestellt werden. 
+		\noindent Im folgenden Kapitel wird die Implementierung einer DApp beschrieben, also einer Decentralized Application. Decentraliczed Applications bieten eine Schnittstelle zwischen Blockchain und Anwender. Nicht immer ist die Interaktion mit Smart-Contracts für den Nutzer durch ein Wallet intentional oder übersichtlich. Es ist möglich, dass Datentypen falsch verwendet werden und der Nutzer im schlimmsten Fall finanziellen Schaden nimmt. Deshalb bieten DApps eine grafische Benutzeroberfläche, die Beispielsweise auf einem Webserver zur Verfügung gestellt wird. So können auch unerfahrene Nutzer ohne technisches Vorwissen mit der DApp interagieren. Durch Wallets wie MetaMask kann eine Verbindung zwischen dem Ethereum-Account und der DApp hergestellt werden. 
 		
-		Zur Entwicklung des Smart-Contracts wird bei der Entwicklung des Prototypen die Programmiersprache Solidity verwendet. Die Syntax ist von der Javascript-Notation abgeleitet. Beim Kompilieren eines oder mehrerer Solidity-Files entsteht Bytecode, welcher auf der EVM ausgeführt werden kann. 
+		\noindent Zur Entwicklung des Smart-Contracts wird bei der Entwicklung des Prototypen die Programmiersprache Solidity verwendet. Die Syntax ist von der Javascript-Notation abgeleitet. Beim Kompilieren eines oder mehrerer Solidity-Files entsteht Bytecode, welcher auf der EVM ausgeführt werden kann. 
 		Die Schnittstelle zwischen Ethereum und Javascript wird durch die Web3-Bibliothek gewährleistet. Diese wird verwendet, um die Verbindung zwischen Frontend und den auf der Blockchain gespeicherten Daten herzustellen. 
 		
 	\section{Smart-Contracts}	
@@ -16,16 +16,16 @@
 		Das folgende Kapitel beschäftigt sich mit der Entwicklung des Smart-Contracts. 
 		Dieses Kapitel stellt die Grundlage der Implementierung dar. Mit der verwendeten Programmiersprache Soldity  können sogenannte Contracts, also Verträge, definiert werden. Diese werden entweder einzeln oder kaskadiert auf der Blockchain ausgeführt. Deshalb wird Solidity auch als Vertrags-Orientiert betitelt \cite{soliditydoc}.
 		
-		Die Ausführung des Programmcodes wird durch die Einheit Gas vergütet \cite{Wood-2017}. Das verbrauchte Gas pro Rechen- oder Speicheroperation wird mit dem angegebenen GasPreis multipliziert und muss mit dem Befehl zum Ausführen des Smart-Contracts an die Miner entrichtet werden. 
-		Smart-Contracts werden einmal initial an die Blockchains gesandt und der Konstruktor wird ausgeführt \cite{EthWP-2017}.
+		\noindent Die Ausführung des Programmcodes wird durch die Einheit Gas vergütet \cite{Wood-2017}. Das verbrauchte Gas pro Rechen- oder Speicheroperation wird mit dem angegebenen GasPreis multipliziert und muss mit dem Befehl zum Ausführen des Smart-Contracts an die Miner entrichtet werden. 
+		Smart-Contracts werden einmal initial an die Blockchains gesandt und der Konstruktor wird ausgeführt \cite{EthWP-2017}. Sobald der Smart-Contract auf der Blockchain ist, können andere Teilnehmer über die sogenannte Application Binary Interface (ABI) auf den Smart-Contract zugreifen und dessen Funktionen ausführen. 
 		
-		Sobald der Smart-Contract auf der Blockchain ist, können andere Teilnehmer über die sogenannte Application Binary Interface (ABI) auf den Smart-Contract zugreifen und dessen Funktionen ausführen. 
-		
-		Der Smart-Contract selbst ist auf die EVM  limitiert. Zwar gibt es globale Einheiten, wie die Zeit in Sekunden, welche seit dem ersten Block vergangen ist messen, jedoch besitzt die EVM kein Zugriff auf externe Speichermedien \cite{soliditydoc}. Zur Abbildung monetärer Vorgänge ist mit Solidity die Umrechnung in die Untereinheiten von Ethereum wie zum Beispiel in Wei möglich. 
+		\noindent Der Smart-Contract selbst ist auf die EVM  limitiert. Zwar gibt es globale Einheiten, wie die Zeit in Sekunden, welche seit dem ersten Block vergangen ist messen, jedoch besitzt die EVM kein Zugriff auf externe Speichermedien \cite{soliditydoc}. Zur Abbildung monetärer Vorgänge ist mit Solidity die Umrechnung in die Untereinheiten von Ethereum wie zum Beispiel in Wei möglich. 
 		Dies ist notwendig, wenn wir beispielsweise einen Betrag an den Smart-Contract schicken möchten. Jeder Smart-Contract hat einen eigenen Public-Key und kann über Funktionen, die mit dem Schlüsselbegriff \texttt{payable} markiert wurden, die Bezahlung in ETH empfangen. Dieser Betrag wird grundsätzlich in Wei gesendet. Eine Umrechnung ist in der Tabelle \ref{table:values} zu sehen. Diese Aufteilung ist notwendig, um Nachkommastellen von Ethereum Beträgen entsprechend darstellen zu können, da in der aktuellen Version Fließkommazahlen nicht unterstützt werden \cite{floating}.
 		
 		\begin{center}
-			\captionof{table}{Untereinheiten der Ethereum-Währung}
+			\captionof{table}{Untereinheiten der Ethereum-Währung\\}
+			\vspace*{\baselineskip}
+			\def\arraystretch{1.1}%
 			\begin{tabular}{ | c | c | }
 				\hline
 				Multiplizierer & Name\\ \hline
@@ -38,9 +38,10 @@
 			\label{table:values}
 		\end{center}
 		
-		Der Smart-Contract der DApp soll möglichst die Bestellung aufnehmen können, den entsprechenden Betrag errechnen und den Nutzer dann die Möglichkeit geben, den Betrag zu bezahlen. Der Contract muss jedoch in seiner Funktionalität schlicht gehalten werden, da, wie bereits erwähnt, Rechenleistung sehr teuer werden kann. Es muss also versucht werden, die Übertragungskosten im Verhältnis zu den Kosten des Services möglichst klein zu halten. 
+		\vspace*{\baselineskip}
+		\noindent Der Smart-Contract der DApp soll möglichst die Bestellung aufnehmen können, den entsprechenden Betrag errechnen und den Nutzer dann die Möglichkeit geben, den Betrag zu bezahlen. Der Contract muss jedoch in seiner Funktionalität schlicht gehalten werden, da, wie bereits erwähnt, Rechenleistung sehr teuer werden kann. Es muss also versucht werden, die Übertragungskosten im Verhältnis zu den Kosten des Services möglichst klein zu halten. 
 		
-		Zusätzlich sollte beachtet werden, dass der Besitzer des Smart-Contracts besondere Privilegien erhält. In der Regel wird der Initiator des Smart-Contracts jedoch nicht zwangsläufig der Besitzer des Restaurants sein oder der Besitzer des Restaurants wechselt, weshalb eine Funktion zum Übertragen  der Privilegien nötig ist. Diese Funktionalität wird in der \texttt{transferPriv}-Funktion gewährleistet (siehe Listing \ref{lst:def}).
+		\noindent Zusätzlich sollte beachtet werden, dass der Besitzer des Smart-Contracts besondere Privilegien erhält. In der Regel wird der Initiator des Smart-Contracts jedoch nicht zwangsläufig der Besitzer des Restaurants sein oder der Besitzer des Restaurants wechselt, weshalb eine Funktion zum Übertragen  der Privilegien nötig ist. Diese Funktionalität wird in der \texttt{transferPriv}-Funktion gewährleistet (siehe Listing \ref{lst:def}).
 		Diese Privilegien können es beispielsweise ermöglichen, die Ausschüttung des Gewinnes auszulösen oder den Preis einzelner Produkte zu ändern und neue hinzuzufügen. 
 		
 		\begin{lstlisting}[caption={Drinks: defining manager},label=lst:def]
@@ -48,52 +49,55 @@
 		
 		/**
 		* @title Drinks, the one and only Bar-DApp
-		* @dev Version of the Drinks-Contract for the "IT-Management" project
+		* @dev Version of the Drinks-Contract for "IT-Management" 
 		*/
-        contract Drinks {
+		contract Drinks {
+
+			address public manager;
+			mapping(uint => mapping (uint => uint)) public orders;
+			mapping(uint => uint) public prices;
 		
-		address public manager;
-		mapping(uint => mapping (uint => uint)) public orders;
-		mapping(uint => uint) public prices;
+			event EmptyPay(address _sener, uint _amount);
 		
-		event EmptyPay(address _sener, uint _amount);
+			/**
+			* @dev Set msg.sender as manager
+			* @dev Set prices for drinks in ether
+			*/
+			function Drinks() public {
+				manager = msg.sender;
+				prices[0] = 0.7 ether;
+				prices[1] = 0.5 ether;
+				prices[2] = 0.3 ether;
+				prices[3] = 0.1 ether;
+			}
 		
-		/**
-		* @dev Set msg.sender as manager
-		* @dev Set prices for drinks in ether
-		*/
-		function Drinks() public {
-		manager = msg.sender;
-		prices[0] = 0.7 ether;
-		prices[1] = 0.5 ether;
-		prices[2] = 0.3 ether;
-		prices[3] = 0.1 ether;
-		}
-		
-		/**
-		* @dev Select a new manager 
-		* @param _manager new manager
-		*/
-		function transferPriv(address _manager) public payable {
-		manager = _manager;
-		}
+			/**
+			* @dev Select a new manager 
+			* @param _manager new manager
+			*/
+			function transferPriv(address _manager) public payable {
+				manager = _manager;
+			}
 		\end{lstlisting}
 		
-		Nachdem der Besitzer festgelegt ist, werden in der Funktion \texttt{Drinks} die Preise für die Produkte festgelegt. Um diese nachträglich zu verändern oder zu ergänzen, kann die Funktion \texttt{changePrice} aufgerufen werden (siehe Listing \ref{lst:price}). Die Anforderung für das Ändern der Preise ist, dass der Absender der Nachricht (\texttt{msg.sender}) auch der Manager des Vertrags ist. 
+		\vspace*{\baselineskip}
+		\noindent Nachdem der Besitzer festgelegt ist, werden in der Funktion \texttt{Drinks} die Preise für die Produkte festgelegt. Um diese nachträglich zu verändern oder zu ergänzen, kann die Funktion \texttt{changePrice} aufgerufen werden (siehe Listing \ref{lst:price}). Die Anforderung für das Ändern der Preise ist, dass der Absender der Nachricht (\texttt{msg.sender}) auch der Manager des Vertrags ist. 
 		
 		Die \texttt{calcPrice}-Funktion zur Berechnung des Preises wird unabhängig von der Bezahlfunktion gehandhabt, da sie so auch im voraus vom Nutzer aufgerufen werden kann, um dem Nutzer den zu bezahlenden Betrag anzuzeigen (siehe Listing \ref{lst:price}). Der Nutzer übergibt die ID und die Anzahl der Produkte als Array an die Funktion. Dies ist für wenige Produkte zwar speicheraufwendig, da gegebenenfalls bei einer Bestellung von nur einem Produkt bereits ein Array erzeugt werden muss. Es lässt jedoch zu, dass der Besitzer weitere Produkte zur Getränkekarte hinzufügen kann, ohne den Smart-Contract in seiner Funktionalität zu beeinflussen. 
-		In der Funktion selbst werden alle Preise mit der entsprechenden Anzahl an Items verrechnet und die Summe als \texttt{unsigend Integer} zurückgegeben. Die Funktion wird mit einem sogenannten \texttt{view}-Modifizierer versehen. Das bedeutet, dass die Funktion garantiert, keine Veränderungen an der Blockchain durchzuführen. So entstehen dem Nutzer beim Ausführen der Funktion keine Kosten. Die Ausführung der Funktion muss daher auch nicht explizit durch den Nutzer genehmigt werden. 
+		In der Funktion selbst werden alle Preise mit der entsprechenden Anzahl an Items verrechnet und die Summe als \texttt{unsigend Integer} zurückgegeben. Die Funktion wird mit einem sogenannten \texttt{view}-Modifier versehen. Das bedeutet, dass die Funktion garantiert, keine Veränderungen an der Blockchain durchzuführen. So entstehen dem Nutzer beim Ausführen der Funktion keine Kosten. Die Ausführung der Funktion muss daher \mbox{auch nicht explizit durch den Nutzer genehmigt werden.}
 		
 		
+		\vspace*{\baselineskip}
 		\begin{lstlisting}[caption={Drinks: price-functions},label=lst:price]
 		/**
 		* @dev Set a new Price
 		* @param _drinks id of the drink
 		* @param _amounts new price of the drink
 		*/
-		function changePrice(uint _drink, uint _price) public view returns (uint) {
-		require(msg.sender == manager);
-		prices[_drink] = _price;
+		function changePrice(uint _drink, uint _price) 
+			public view returns (uint) {
+				require(msg.sender == manager);
+				prices[_drink] = _price;
 		}
 		
 		
@@ -105,103 +109,117 @@
 		* @param _amounts array of ordered amounts
 		* @return uint, price of coctails in Ether 
 		*/
-		function calcPrice(uint[] _drinks, uint[] _amounts) public view returns (uint) {
-		uint price;
-		for (uint i = 0; i < _drinks.length; i++){
-		price += _amounts[i]* prices[_drinks[i]];
-		}
-		return price;
+		function calcPrice(uint[] _drinks, uint[] _amounts) 
+			public view returns (uint) {
+				uint price;
+				for (uint i = 0; i < _drinks.length; i++){
+					price += _amounts[i]* prices[_drinks[i]];
+				}
+			return price;
 		}
 		\end{lstlisting}
 		
-		Der Kern des Vertrages bietet die Bezahlfunktion \texttt{takeOrder} für die Produkte (siehe Listing \ref{lst:ordering}). Als Parameter der Funktion muss angegeben werden, für welchen Tisch die Bestellung aufgegeben wurde. Die Herausforderung liegt an dieser Stelle, wie bereits bei der Berechnungsfunktion, in der Darstellung und in der Speicherung der bestellten Getränke. Je nach Anzahl der insgesamt verfügbaren Produkte auf der Karte empfiehlt es sich, entweder eine Aufreihung der Anzahl aller Getränke anzugeben, dabei jede ID als einfachen \texttt{Integer}-Wert. Jedoch würden dann auch ein \texttt{Integer} übergeben werden, falls kein Produkt bestellt wurde. Mit wachsender Anzahl an Produkten auf der Getränkekarte lohnt sich daher ein Mapping. Dies lässt auch ein einfaches Erweitern der Speisekarte zu, kostet aber bei der Ausführung eine minimal höhere Summe an Gas. Da es sich jedoch im Anwendungsfall lediglich um einstellige Centbeträge handeln wird, wird dies als vernachlässigbar betrachtet. 
+		\vspace*{\baselineskip}
+		\noindent Der Kern des Vertrages bietet die Bezahlfunktion \texttt{takeOrder} für die Produkte (siehe Listing \ref{lst:ordering}). Als Parameter der Funktion muss angegeben werden, für welchen Tisch die Bestellung aufgegeben wurde. Die Herausforderung liegt an dieser Stelle, wie bereits bei der Berechnungsfunktion, in der Darstellung und in der Speicherung der bestellten Getränke. Je nach Anzahl der insgesamt verfügbaren Produkte auf der Karte empfiehlt es sich, entweder eine Aufreihung der Anzahl aller Getränke anzugeben, dabei jede ID als einfachen \texttt{Integer}-Wert. Jedoch würden dann auch ein \texttt{Integer} übergeben werden, falls kein Produkt bestellt wurde. Mit wachsender Anzahl an Produkten auf der Getränkekarte lohnt sich daher ein Mapping. Dies lässt auch ein einfaches Erweitern der Speisekarte zu, kostet aber bei der Ausführung eine minimal höhere Summe an Gas. Da es sich jedoch im Anwendungsfall lediglich um einstellige Centbeträge handeln wird, wird dies als vernachlässigbar betrachtet. 
 		Um die Möglichkeit zu gewährleisten, dass auch etwas für den Nachbartisch bestellt werden kann, wird die Tisch-ID, die im User-Interface ausgewählt wird, als Primärschlüssel für die Speicherung der Getränke verwendet.
 		
-		Die Bezahlfunktion nutzt abschließend die Berechnungsfunktion, um zu überprüfen, ob der bezahlte Betrag in Wei dem zuvor berechneten Betrag entspricht. Sollte das nicht der Fall sein, wird die Funktion abgebrochen und das verbleibende Geld wird dem Nutzer zurückerstattet. 
+		\noindent Die Bezahlfunktion nutzt abschließend die Berechnungsfunktion, um zu überprüfen, ob der bezahlte Betrag in Wei dem zuvor berechneten Betrag entspricht. Sollte das nicht der Fall sein, wird die Funktion abgebrochen und das verbleibende Geld wird dem Nutzer zurückerstattet. 
 		Danach wird durch alle Getränke durchitteriert und die entsprechende Menge auf der Blockchain hinterlegt. 
 		
-		Auch dem Personal muss die Möglichkeit gegeben werden, die Anzahl der bestellten Getränke abzurufen. Dafür steht die \texttt{getOrder}-Funktion bereit (siehe Listing \ref{lst:ordering}). Dabei handelt es sich erneut um eine reine \texttt{view}-Funktion, da zu ihrer Ausführung die Blockchain nicht verändert werden muss. Mit ihr kann jeweils nur ein Getränk abgerufen werden, da die Rückgabe von dynamischen Arrays und Mappings nicht untersützt wird \cite{soliditydocs}. Da die Ausführung der Funktion jedoch kostenlos ist, kann diese Funktion iterativ für jedes Produkt aufgerufen werden. 
+		\noindent Auch dem Personal muss die Möglichkeit gegeben werden, die Anzahl der bestellten Getränke abzurufen. Dafür steht die \texttt{getOrder}-Funktion bereit (siehe Listing \ref{lst:ordering}). Dabei handelt es sich erneut um eine reine \texttt{view}-Funktion, da zu ihrer Ausführung die Blockchain nicht verändert werden muss. Mit ihr kann jeweils nur ein Getränk abgerufen werden, da die Rückgabe von dynamischen Arrays und Mappings nicht untersützt wird \cite{soliditydocs}. Da die Ausführung der Funktion jedoch kostenlos ist, kann diese Funktion iterativ für jedes Produkt aufgerufen werden. 
 		
-		Ist der Kunde bedient, kann die Bestellung über die \texttt{serve}-Funktion wieder von der Blockchain gelöscht werden (siehe Listing \ref{lst:ordering}). Auch hier werden wieder zwei Arrays und die ID des Tisches übergeben. Die Anzahl wird hier nicht zurück gesetzt sondern lediglich um angegebene Anzahl verringert, sodass die Bestellung in mehreren Teilen erfolgen kann. 
+		\noindent Ist der Kunde bedient, kann die Bestellung über die \texttt{serve}-Funktion wieder von der Blockchain gelöscht werden (siehe Listing \ref{lst:ordering}). Auch hier werden wieder zwei Arrays und die ID des Tisches übergeben. Die Anzahl wird hier nicht zurück gesetzt sondern lediglich um angegebene Anzahl verringert, sodass die Bestellung in mehreren Teilen erfolgen kann. 
 		
-		Zuletzt steht die Fallback-Funktion, die aufgerufen wird, wenn versehentlich Geld an den Smart-Contract geschickt wird, ohne eine Funktion aufzurufen. Das Geld kann dann zurückgesendet werden. 
+		\noindent Zuletzt steht die Fallback-Funktion, die aufgerufen wird, wenn versehentlich Geld an den Smart-Contract geschickt wird, ohne eine Funktion aufzurufen. Das Geld kann dann zurückgesendet werden. 
 		
 		\begin{lstlisting}[caption={Drinks: order, server and fallback-functions},label=lst:ordering]
 		/**
 		* @dev Token-transfer from msg.sender to address
-		* @notice Please call the calcPrice-Function first, and send the right Amount of Ether
-		* @notice Contract will be reverted otherwise
 		* @param _drinks provide array of listed drinks
 		* @param _amounts array of ordered amounts
 		*/
-		function takeOrder(uint _table, uint[] _drinks, uint[] _amounts) public payable {
-		uint price = calcPrice(_drinks, _amounts);
-		require (msg.value >= price);
-		for (uint i = 0; i < _drinks.length; i++){
-		orders[_table][_drinks[i]] += _amounts[i];
-		}
+		function takeOrder(uint _table, uint[] _drinks, uint[] _amounts) 
+			public payable {
+				uint price = calcPrice(_drinks, _amounts);
+				require (msg.value >= price);
+				for (uint i = 0; i < _drinks.length; i++){
+					orders[_table][_drinks[i]] += _amounts[i];
+				}
 		}
 		
 		/**
-		* @dev Returns the correct amount of coctails ordered from specific address
+		* @dev Returns amount of cocktails ordered from a specific address
 		* @param _table id of table
 		* @param _drinkId id of requested drink
 		* @return uint, amount of drinks
 		*/
-		function getOrder(uint _table, uint _drinkId) public view returns (uint){
-		return orders[_table][_drinkId];
+		function getOrder(uint _table, uint _drinkId) 
+			public view returns (uint){
+				return orders[_table][_drinkId];
 		}
-		
 		/**
-		* @dev Removes ordered cotails from list
+		* @dev Removes ordered cocktails from list
 		* @notice Please do not call this contract if you arent the restaurant manager
 		* @param _drinks provide array of served drinks
 		* @param _amounts array of served amounts
 		*/
-		function serve(uint _table, uint[] _drinks, uint[] _amounts) public {
-		require(msg.sender == manager);
-		for (uint i = 0; i < _drinks.length; i++){
-		orders[_table][_drinks[i]] -= _amounts[i];
-		}
+		function serve(uint _table, uint[] _drinks, uint[] _amounts) 
+			public {
+				require(msg.sender == manager);
+				for (uint i = 0; i < _drinks.length; i++){
+					orders[_table][_drinks[i]] -= _amounts[i];
+				}
 		}
 		
 		/**
 		* @notice Fallback. Do not call this function ever. Thanks. 
 		*/
-		function() public payable { EmptyPay(msg.sender, msg.value); }
-		
-		} 
+		function() 
+			public payable { 
+				EmptyPay(msg.sender, msg.value); 
+		}
 		\end{lstlisting}
 		
 	\subsection{Entscheidungen für das User Interface}	
 	
 		Dem Design des Frontendes wird hierbei eine besondere Rolle zugeteilt. Er muss die Einfachheit des Smart-Contracts durch eine simple aber funktionierende Nutzerschnittstelle ergänzen. Die Blockchain-Technik wird noch lange nicht von jedem Nutzer akzeptiert, deshalb soll die Hemmschwelle besonders niedrig gehalten werden. \cite{Nielsen:1999:DWU:519216} 
-		
-		Um dies zu ermöglichen, ist die Entscheidung gefallen, zwei Front-End-Anbindungen zu erstellen. Zum einen für den Besucher des Restaurants, welches in Abbildung \ref{abb:visitor} dargestellt ist.  Zum anderen die Ansicht für die Mitarbeiter des Restaurants. Diese ist in Abbildung \ref{abb:member} zu erkennen.
-		
+		Um dies zu ermöglichen wurde die Entscheidung getroffen, zwei Front-End-Anbindungen zu erstellen. Der relevante Bestellungs-Anteil des Benutzer-Frontends, welcher die Übersicht der einzelnen Drink-Elemente zur Verfügung stellt, ist dazu in Abbildung \ref{abb:visitor} unten dargestellt.  		
 		
 		\begin{figure}[h]
-			\centerline{\includegraphics[width=15cm]{Bilder/screenshot1.png}}
+			\centerline{\includegraphics[width=0.62\textwidth]{Bilder/screenshot1_NEW.png}}
 			\caption{Ansicht für Besucher}
 			\label{abb:visitor}
 		\end{figure}
+	
+		\noindent Die Frontend-Anbindung des Nutzers ist dabei so gestaltet, dass sich der Nutzer die gewünschten Produkte aus der Menükarte wählen kann und zu einem Warenkorb hinzufügen kann. Hat der Nutzer den Auswahlvorgang abgeschlossen, so kann er über den Menü-Button \glqq Preis berechnen \grqq{} die Blockchain-Funktionalität nutzen, um den exakten Preis zu berechnen. Dies wird über die Funktionalität der Blockchain gelöst, da so sichergestellt werden kann, dass exakt dieselben Parameter verwendet werden und die Transaktion nicht fehlschlägt. Ist der Nutzer mit dem Preis einverstanden, kann er die Transaktion eröffnen. 
+		Dabei öffnet sich die Metamask Integration, welche den erwarteten Preis bereits anzeigt. Der Nutzer braucht lediglich die Transaktion bestätigen. 
+		Um dem Nutzer eine Bestätigung zu geben, wird der Transaktion-Hash angezeigt und auf Etherscan verlinkt \cite{etherscan}. 
+		%Eine Ansicht dessen findet sich in Abbildung \ref{abb:etherscan}.
+		Dort kann er nun überprüfen, ob die Transaktion schon angenommen wurde oder ob diese noch ausstehend ist. Ein Mitarbeiter könnte sich nun die Transaktion einscannen und die Bezahlung überprüfen. 
+	
+		%\noindent Der Benutzer hat hierbei die Möglichkeit, zwischen den angebotenen Drinks der exemplarischen Bar-Umgebung zu wählen. Diese werden gemäß der ausgewählten Anzahl einer globalen Bestellungs-Datenstruktur hinzugefügt, deren Kauf über den \textit{Buy}-Button (im linken unteren Viertel der Abbildung \ref{abb:visitor} dargestellt) bestätigt wird. Nach der Übermittlung der Bestellungs-Daten an die Server-Komponente der Bar wird anschließend der generierte Transaktions-Hash abgebildet, mit dessen Hilfe der Kunde den Status der korrespondierenden Transaktion dynamisch verifizieren kann.\\
+		%\noindent Eine alternative Ansicht steht für die Mitarbeiter des Restaurants zur Verfügung, deren Struktur ausschnittweise in Abbildung \ref{abb:member} visualisiert ist. Die dargestellte Administrations-Oberfläche stellt eine Übersicht der im Tagesverlauf generierten Bestellungen bereit, welche die Zuordnung zu den jeweiligen Ethereum-Transaktionen ermöglicht.
+		
+		%\vspace*{\baselineskip}
+		\noindent Die Mitarbeiter, welche die Bestellung aufnehmen, und verarbeiten erhalten eine gesonderte Ansicht. Im Hintergrund werden die relevanten Daten der Bestellung, inklusive des Transaction-Hashs, in eine Datenbank eingetragen. Dies darf nur nach erfolgreicher Bezahlung erfolgen. Der Absender der Nachricht ist zwar in der Transaktion hinterlegt, jedoch ist diese Information für die Bestellung nicht weiter relevant, da der entsprechende Tisch angegeben wurde. Als Primary-Key dient der Datenbank eine fortlaufende Nummerierung der Transaktion-Hash. Dieser wird zusätzlich als Link hinterlegt und kann bei bedarf überprüft werden. Falls ein Fehler unterlaufen sollte, könnte das Personal den tatsächlichen Absender des Geldes ermitteln, vorausgesetzt der Käufer gibt seine Ethereum-Addresse preis. Auch eine manuelle Rückzahlung wäre dadurch möglich. Desweiteren muss die Auflistung selbstverständlich die bestellten Getränke enthalten. Die Struktur dieser Übersicht ist ausschnittweise in Abbildung \ref{abb:member} unten visualisiert. Die hier dargestellte Administrations-Oberfläche stellt dabei eine Übersicht der im Tagesverlauf generierten Bestellungen bereit, welche die \mbox{Zuordnung zu den Ethereum-Transaktionen ermöglicht.}\\
 		
 		\begin{figure}[h]
-			\centerline{\includegraphics[width=15cm]{Bilder/screenshot3.png}}
-			\caption{Ansicht für Mitarbeiter: Gesamtübersicht}
+			\centerline{\includegraphics[width=0.9\textwidth]{Bilder/screenshot3_NEW.png}}
+			\caption{Ansicht für Mitarbeiter:Bestellungs-Übersicht}
 			\label{abb:member}
 		\end{figure}
 		
 		
-		Die Frontend-Anbindung des Nutzers ist so gestaltet, dass sich der Nutzer die gewünschten Produkte aus der Menükarte wählen kann und zu einem Warenkorb hinzufügen kann. Hat der Nutzer den Auswahlvorgang abgeschlossen, so kann er über den Menü-Button \glqq Preis berechnen \grqq{} die Blockchain-Funktionalität nutzen, um den exakten Preis zu berechnen. Dies wird über die Funktionalität der Blockchain gelöst, da so sichergestellt werden kann, dass exakt dieselben Parameter verwendet werden und die Transaktion nicht fehlschlägt. Ist der Nutzer mit dem Preis einverstanden, kann er die Transaktion eröffnen. 
-		Dabei öffnet sich die Metamask Integration, welche den erwarteten Preis bereits anzeigt. Der Nutzer braucht lediglich die Transaktion bestätigen. 
-		Um dem Nutzer eine Bestätigung zu geben, wird der Transaktion-Hash angezeigt und auf Etherscan verlinkt \cite{etherscan}. Eine Ansicht dessen findet sich in Abbildung \ref{abb:etherscan}.
-		Dort kann er nun überprüfen, ob die Transaktion schon angenommen wurde oder ob diese noch ausstehend ist. Ein Mitarbeiter könnte sich nun die Transaktion einscannen und die Bezahlung überprüfen. 
-		
+		%\noindent Die Frontend-Anbindung des Nutzers ist so gestaltet, dass sich der Nutzer die gewünschten Produkte aus der Menükarte wählen kann und zu einem Warenkorb hinzufügen kann. Hat der Nutzer den Auswahlvorgang abgeschlossen, so kann er über den Menü-Button \glqq Preis berechnen \grqq{} die Blockchain-Funktionalität nutzen, um den exakten Preis zu berechnen. Dies wird über die Funktionalität der Blockchain gelöst, da so sichergestellt werden kann, dass exakt dieselben Parameter verwendet werden und die Transaktion nicht fehlschlägt. Ist der Nutzer mit dem Preis einverstanden, kann er die Transaktion eröffnen. 
+		%Dabei öffnet sich die Metamask Integration, welche den erwarteten Preis bereits anzeigt. Der Nutzer braucht lediglich die Transaktion bestätigen. 
+		%Um dem Nutzer eine Bestätigung zu geben, wird der Transaktion-Hash angezeigt und auf Etherscan verlinkt \cite{etherscan}. Eine Ansicht dessen findet sich in Abbildung \ref{abb:etherscan}.
+		%Dort kann er nun überprüfen, ob die Transaktion schon angenommen wurde oder ob diese noch ausstehend ist. Ein Mitarbeiter könnte sich nun die Transaktion einscannen und die Bezahlung überprüfen. 
+
+		\newpage
+		\noindent Um aus Kunden- und Betreiber-Perspektive die Interaktion mit der Etherscan-Umgebung zu vereinfachen, können alle Link-Referenzen auf diese Seite direkt in der Bestell- und Administrations-Oberfläche dargestellt werden. Ermöglicht wird diese Funktionalität durch die Verwendung einer internen \textit{Modal}-Komponente, welche zur Echtzeit-Darstellung von Website-Inhalten genutzt werden kann. Durch Angabe des Transaktions-Hashes wird dabei die korrespondierende Etherscan-Übersicht der Transaktion geöffnet. Auf diese Weise können einzelne Transaktions-Parameter unmittelbar innerhalb der Bestell- und Administrationsumgebung verifiziert werden, sodass alle an der Transaktion beteiligten Instanzen jederzeit deren Status abrufen können. Dies ermöglicht insbesondere Anwendern mit limitierten Ethereum-Erfahrungen einen vereinfachten Einstieg in die Verwendung der implementierten Demonstrator-Anwendung. Eine exemplarische Darstellung von Transaktionen innerhalb der \textit{Modal}-Komponente ist in Abbildung \ref{abb:etherscan} unten visualisiert.\\
+
 		\begin{figure}[h]
-			\centerline{\includegraphics[width=15cm]{Bilder/screenshot2.png}}
+			\centerline{\includegraphics[width=0.9\textwidth]{Bilder/screenshot2_NEW.png}}
 			\caption{Ansicht für Mitarbeiter: Verifikation durch Etherscan}
 			\label{abb:etherscan}
 		\end{figure}
-		
-		Die Mitarbeiter, welche die Bestellung aufnehmen, und verarbeiten erhalten eine gesonderte Ansicht. Im Hintergrund werden die relevanten Daten der Bestellung, inklusive des Transaction-Hashs, in eine Datenbank eingetragen. Dies darf nur nach erfolgreicher Bezahlung erfolgen. Der Absender der Nachricht ist zwar in der Transaktion hinterlegt, jedoch ist diese Information für die Bestellung nicht weiter relevant, da der entsprechende Tisch angegeben wurde. Als Primary-Key dient der Datenbank eine fortlaufende Nummerierung der Transaktion-Hash. Dieser wird zusätzlich als Link hinterlegt und kann bei bedarf überprüft werden. Falls ein Fehler unterlaufen sollte, könnte das Personal den tatsächlichen Absender des Geldes ermitteln, vorausgesetzt der Käufer gibt seine Ethereum-Addresse preis. Auch eine manuelle Rückzahlung wäre dadurch möglich. Desweiteren muss die Auflistung selbstverständlich die bestellten Getränke enthalten.

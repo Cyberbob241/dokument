@@ -8,53 +8,55 @@
 		
 		Wir leben im 21. Jahrhundert, indem die Bedeutung von Daten immer mehr zunimmt. Eine Vielzahl von Geräten verfügt mittlerweile über einen Speicher irgend einer Form und auch besonders die Anzahl der Geräte, welche vernetzt operieren nimmt drastisch zu. Der daraus resultierende Zuwachs des Wertes von Daten geht soweit, dass in einem Artikel "`der Zeit"' sogar soweit gegangen wird davon zu sprechen, dass Daten das Gold des 21. Jahrhunderts seien \cite{gd21jh}. Häufig gibt es für solche Daten keinen zentralen IT-Dienst, weshalb diese dezentral beispielsweise mittels P2P-Netzen umgesetzt werden. Was das genau bedeutet und wie so etwas funktioniert wird in Kapitel \ref{subsec:p2p} beschrieben. In vielen Fällen ist die Korrektheit dieser Daten von essenzieller Bedeutung für verschiedenste Parteien.  Betrachtet man das Beispiel, dass 2 Parteien ein Vertrag in .PDF-Form vorliegen haben. Sagt die eine Datei nun, dass beispielsweise eine 1000 Euro Zahlung fällig wird und die andere sagt es würden 2000 Euro fällig, birgt dies ein deutliches Konfliktpotential. Ohne eine Überprüfungsmöglichkeit ist hier ein Streit vorprogrammiert und eine Lösung lässt sich möglicherweise nur schwer erzielen. Sind diese Daten nun aber mit einem Mechanismus versehen, der sie auf Echtheit und Richtigkeit prüfen kann ist es möglich potentielle Konflikteskalationen zu vermeiden. Die beiden Datensätze könnten einem unabhängigen Gericht vorgelegt werden und anhand dieser Mechanismen könnte Recht gesprochen werden. Der Streit wäre gelöst.
 		
-		Ein solcher Mechanismus zum Nachweisen der Echtheit und Richtigkeit könnte beispielsweise eine Blockchain sein. Sehr grob beschrieben ist die Blockchain ein Mechanismus, der vergangene Informationen beziehungsweise Versionen in seiner sogenannten Headerinformation anzeigt beziehungsweise referenziert. Neue Informationen werden in sogenannten Blöcken angefügt, wodurch der tatsächliche Informationsgehalt der Blockchain stetig wächst. Dieser Mechanismus wird in Abbildung \ref{BC} veranschaulicht, wobei "`ABC"' als Name der Version zu verstehen ist. Eine genauere und technischere Beschreibung wird ebenfalls in Kapitel \ref{chap:2grundlagen} folgen.
+		\noindent Ein solcher Mechanismus zum Nachweisen der Korrektheit und Integrität könnte beispielsweise durch eine Blockchain realisiert werden. Sehr grob beschrieben ist die Blockchain ein Mechanismus, der vergangene Informations-Fragmente beziehungsweise Versionsdaten in seiner sogenannten Headerinformation referenziert. Neue Informationen werden dabei in sogenannten Blöcken angefügt, wodurch der tatsächliche Informationsgehalt der Blockchain-Struktur stetig wächst. Dieser Mechanismus wird in Abbildung \ref{BC} veranschaulicht, wobei die entsprechende Version der Komponente repräsentiert. Eine detaillierte Beschreibung der technischen Parameter des Blockchain-Konzeptes erfolgt in Abschnitt~\ref{chap:2grundlagen}.
 		\newpage
 		
+		\vspace*{0cm}
 		\begin{figure}[htbp]
 			\centering
 			\includegraphics[keepaspectratio,width=\textwidth]{Bilder/blockchain.jpg}
-			\caption{Beispieldarstellung Blockchain}
+			\caption{Schematische Darstellung des Blockchain-Konzeptes}
 			\label{BC}
 		\end{figure}
 		
-		Die im wohl bekanntesten Anwendungsfälle der Blockchain-Technologie sind wohl die Kryptowährungen. Allen voran ist hier der sogenannten Bitcoin zu nennen. Bitcoin ist eine 2009 unter dem Pseudonym Satoshi Nakamoto, über dessen wahre Identität oder Identitäten bis heute  nur spekuliert werden kann, veröffentlichte Kryptowährung. Bitcoin war laut Statista (Stand 2017) die mit deutlichem Abstand dominante Kryptowährung \cite{kwrank}. Als nächstes zu nennen und Bitcoin auf Rang 2 der Krypowährungen folgend ist Ethereum, welches im Jahr 2013 von Vitalik Buterin vorgestellt wurde und im Jahr 2015 erschien. Ethereum selbst ist eigentlich nicht die Kryptowährung, sondern das System, welches mit der Währung ETH arbeitet. Der Unterschied zwischen Bitcoin und Ethereum ist, dass Ethereum zusätzlich sogenannte "`Smart Contracts"' verarbeitet, welche so viel wie "`Intelligente Verträge"' bedeuten. Die beiden bisher genannten Beispiele unterliegen im Vergleich zu "`echten"' Währungen keiner zentralen Verwaltung wie beispielsweise Banken, sondern ihr Wert bestimmt sich zu 100\% aus Angebot und Nachfrage. Weniger bekannt, aber nicht weniger relevant ist das Hyperledger Project. Hierbei handelt es sich nicht um eine Blockchain an sich, sondern eher um eine Ansammlung von Open Source Blockchain Tools. Diese Tools beschäftigen sich damit Daten überprüfbar und sicher zu machen. Auch bietet Hyperledger einige Frameworks zum Entwickeln eigener Blockchain Tools an, um diese weiter zu verbreiten. Die einigen wohl schon bekannten Logos der drei Angesprochenen sind in Abbildung \ref{diedrei} zu sehen.
+		\noindent Die wohl bekanntesten Anwendungsfälle der Blockchain-Technologie sind aktuell die Kryptowährungen. Allen voran ist hier der sogenannten Bitcoin zu nennen. Bitcoin ist eine 2009 unter dem Pseudonym Satoshi Nakamoto, über dessen wahre Identität oder Identitäten bis heute  nur spekuliert werden kann, veröffentlichte Kryptowährung. Bitcoin war laut Statista (Stand 2017) die mit deutlichem Abstand dominante Kryptowährung \cite{kwrank}. Als nächstes zu nennen und Bitcoin auf Rang 2 der Kryptowährungen folgend ist Ethereum, welches im Jahr 2013 von Vitalik Buterin vorgestellt wurde und im Jahr 2015 erschien. Ethereum selbst ist eigentlich nicht die Kryptowährung, sondern das System, welches mit der Währung ETH arbeitet. Der Unterschied zwischen Bitcoin und Ethereum ist, dass Ethereum zusätzlich sogenannte "`Smart Contracts"' verarbeitet, welche so viel wie "`Intelligente Verträge"' bedeuten. Die beiden bisher genannten Beispiele unterliegen im Vergleich zu "`echten"' Währungen keiner zentralen Verwaltung wie beispielsweise Banken, sondern ihr Wert bestimmt sich zu 100\% aus Angebot und Nachfrage. Weniger bekannt, aber nicht weniger relevant ist das Hyperledger Project. Hierbei handelt es sich nicht um eine Blockchain an sich, sondern eher um eine Ansammlung von Open Source Blockchain Tools. Diese Tools beschäftigen sich damit Daten überprüfbar und sicher zu machen. Auch bietet Hyperledger einige Frameworks zum Entwickeln eigener Blockchain Tools an, um diese weiter zu verbreiten. Die jeweiligen Firmenzeichen der drei referenzierten Projekte sind in Abbildung \ref{diedrei} unten übersichtsartig  dargestellt.\\
 		
 		\begin{figure}[htbp]
 			\centering
 			\includegraphics[keepaspectratio,width=\textwidth]{Bilder/die3vorgestellten.jpg}
-			\caption{Die drei angesprochenen Blockchain-Anwendungen}
+			\caption{Logos der Blockchain-Anwendungen Ethereum, Bitcoin und Hyperledger}
 			\label{diedrei}
 		\end{figure} 
 		
+	
 	\section{Aufbau des Dokumentes}
 	
 		In Kapitel \ref{chap:1einleitung} wurde eine Einführung in das Thema Blockchain gegeben. In Kapitel \ref{chap:2grundlagen} wird auf die theoretischen Grundlagen eingegangen und jene erläutert. Zunächst wird dort auf Kryptohashes eingegangen. Anschließend wird allgemein P2P (Peer-to-Peer) erläutert und darauf folgend dezentrale Netze erklärt. Danach wird Asymmetrische Kryptographie betrachtet und schließlich mit der genaueren Erläuterung des Begriffs Kryptowährung abgeschlossen. In Kapitel \ref{chap:3methodik} wird ddas methodische Vorgehen in dieser Arbeit erläutert. Dazu gehören unter anderem die Durchführung von Interviews und einer Machbarkeitsstudie. In Kapitel \ref{chap:4szenario} wird zunächst eine betriebswirtschaftliche Kontextualisierung durch geführt. Anschließend wird ein Fallbeispiel geliefert und verschiedene Use-Cases aus dem Bereich der Gastronomie aufgezeigt. In Kapitel \ref{chap:5proto} wird ein entworfener Prototyp vorgestellt sowie für diesen benötigte  beziehungsweise durch ihn durchgeführte Smart Contracts erläutert. Die Arbeit schließt mit dem Kapitel \ref{chap:6fazit} einem Fazit.	
 	
-	\section{Wissenschaftliche Forschungsfragen}\label{sec:fragen}
-		
-		Die Analyse des komplexen und umfangreichen Problemkontextes kann nur auf Basis einer grobgranularen Vordifferenzierung in stärker fokussierte Teilaspekte realisiert werden. Zur Repräsentation der initial identifizierten Problembereiche sollen im Verlauf des folgenden Abschnittes wissenschaftliche Forschungsfragen formuliert werden, aus deren Bearbeitung die Identifikation von Malware-Methoden zur Detektion virtualisierter Laufzeitumgebungen sowie die \mbox{Konzeption von korrespondierenden Verschleierungsmaßnahmen resultiert.} \\
-		
-		\noindent\textbf{1. Welche Verfahren zur Analyse von Malware-Implementierungen existieren und welche Relevanz besitzen virtuelle Systeme in diesem Kontext?}\\
-		
-		\begin{addmargin}[1em]{0em}
-			\noindent Das Verständnis wesentlicher Parameter von Komposition und Funktionalität konkreter Malware-Derivate erfordert die extensive Analyse exemplarischer Implementierungen. Hierbei lassen sich divergente Analyseansätze differenzieren, welche beispielsweise die dedizierte Quellcode-Analyse oder die dynamische Simulation des Malware-Verhaltens priorisieren. Um die potentiell unkontrollierbare Infektion von weiteren Elementen in produktiven Systemumgebungen zu vermeiden, werden dabei in der Regel virtuelle Systeme zur gefahrlosen Examination der Schadsoftware instrumentalisiert. Die kontinuierliche Weiterentwicklung im Kontext der Virtualisierung offeriert im Vergleich zur manuellen Analyse auf physischen Produktivsystemen weitere Vorteile, deren Beitrag zur \makebox[\linewidth][s]{Realisierung von Malware-Analysen in einem dedizierten Abschnitt diskutiert wird.}  \\
-		\end{addmargin}	
-		
-		\noindent\textbf{2. Welche systemspezifischen Indizien werden von aktuellen Malware-\\\noindent Implementierungen zur Detektion virtueller Systemumgebungen eingesetzt?}\\
-		
-		\begin{addmargin}[1em]{0em}
-			\noindent Auf Basis einer initialen Präsentation der von Virtualisierungs-Implementierungen induzierten System-Anomalien werden diese anhand der intern verwendeten Methodik einer grobgranularen Kategorisierung unterzogen. Primär wird hierbei zwischen hardwareorientierten Realisierungsansätzen und softwarebasierten Konzepten differenziert, wobei final eine dedizierte Evaluation der identifizierten Detektionsansätze hinsichtlich ihrer Realisierbarkeit in produktiven Systemkontexten durchgeführt wird. So sind insbesondere die im Rahmen verdeckter Initialkompromittierungen verwendeten Datensätze quantitativ zu limitieren, um die kapazitäre Belastung der zu kompromittierenden Systeme und die hierdurch induzierten Anomalien zu minimieren. Auch dieser mitunter nicht unkritische Aspekt soll im Rahmen einer Kompromissfindung zwischen dem Leistungsumfang der Detektionsmethoden und ihrer Verdecktheit berücksichtigt werden. \\
-		\end{addmargin}
-		
-		\noindent\textbf{3. Welche Methoden und Verfahren können zur Optimierung der in einem virtuellen System generierten Analyse-Resultate eingesetzt werden?}\\
-		
-		\begin{addmargin}[1em]{0em}
-			Ein wesentliches Element zur Optimierung von Analyse-Resultaten im Kontext virtualisierter Systeme ist die Konfiguration des Systems zur möglichst realitätsnahen Emulation einer produktiven Umgebung. Auf diese Weise können die im Rahmen der vorhergehenden Analyse identifizierten Detektionsmechanismen von Malware-Implementierungen getäuscht werden, wodurch final die Analyse des vollständigen Funktionalitätsumfangs ermöglicht wird.
-			Unter Berücksichtigung der Diversität moderner Malware-Realisierungen sind weiterhin Konzepte zu erarbeiten, welche eine möglichst adaptive Anpassung der identifizierten Optimierungsmethoden an die ver- \makebox[\linewidth][s]{schiedenen Implementierungen von virtualisierten Systemumgebungen ermöglichen.}\\
-			
-			
-		\end{addmargin}
-		
-		\noindent Die Evaluation der Analyse-Techniken konzentriert sich im Rahmen dieses Dokumentes auf die signaturbasierte Identifikation von Malware-Kompromittierungen.
-		Die Referenzierung von Methoden, deren Implementierung auf heuristischen Ansätzen oder neuronalen Netze basiert, wird daher nur an ausgewählten Stellen der \mbox{Vollständigkeit halber vorgenommen.}
+%%	\section{Wissenschaftliche Forschungsfragen}\label{sec:fragen}
+%		
+%		Die Analyse des komplexen und umfangreichen Problemkontextes kann nur auf Basis einer grobgranularen Vordifferenzierung in stärker fokussierte Teilaspekte realisiert werden. Zur Repräsentation der initial identifizierten Problembereiche sollen im Verlauf des folgenden Abschnittes wissenschaftliche Forschungsfragen formuliert werden, aus deren Bearbeitung die Identifikation von Malware-Methoden zur Detektion virtualisierter Laufzeitumgebungen sowie die \mbox{Konzeption von korrespondierenden Verschleierungsmaßnahmen resultiert.} \\
+%		
+%		\noindent\textbf{1. Welche Verfahren zur Analyse von Malware-Implementierungen existieren und welche Relevanz besitzen virtuelle Systeme in diesem Kontext?}\\
+%		
+%		\begin{addmargin}[1em]{0em}
+%			\noindent Das Verständnis wesentlicher Parameter von Komposition und Funktionalität konkreter Malware-Derivate erfordert die extensive Analyse exemplarischer Implementierungen. Hierbei lassen sich divergente Analyseansätze differenzieren, welche beispielsweise die dedizierte Quellcode-Analyse oder die dynamische Simulation des Malware-Verhaltens priorisieren. Um die potentiell unkontrollierbare Infektion von weiteren Elementen in produktiven Systemumgebungen zu vermeiden, werden dabei in der Regel virtuelle Systeme zur gefahrlosen Examination der Schadsoftware instrumentalisiert. Die kontinuierliche Weiterentwicklung im Kontext der Virtualisierung offeriert im Vergleich zur manuellen Analyse auf physischen Produktivsystemen weitere Vorteile, deren Beitrag zur \makebox[\linewidth][s]{Realisierung von Malware-Analysen in einem dedizierten Abschnitt diskutiert wird.}  \\
+%		\end{addmargin}	
+%		
+%		\noindent\textbf{2. Welche systemspezifischen Indizien werden von aktuellen Malware-\\\noindent Implementierungen zur Detektion virtueller Systemumgebungen eingesetzt?}\\
+%		
+%		\begin{addmargin}[1em]{0em}
+%			\noindent Auf Basis einer initialen Präsentation der von Virtualisierungs-Implementierungen induzierten System-Anomalien werden diese anhand der intern verwendeten Methodik einer grobgranularen Kategorisierung unterzogen. Primär wird hierbei zwischen hardwareorientierten Realisierungsansätzen und softwarebasierten Konzepten differenziert, wobei final eine dedizierte Evaluation der identifizierten Detektionsansätze hinsichtlich ihrer Realisierbarkeit in produktiven Systemkontexten durchgeführt wird. So sind insbesondere die im Rahmen verdeckter Initialkompromittierungen verwendeten Datensätze quantitativ zu limitieren, um die kapazitäre Belastung der zu kompromittierenden Systeme und die hierdurch induzierten Anomalien zu minimieren. Auch dieser mitunter nicht unkritische Aspekt soll im Rahmen einer Kompromissfindung zwischen dem Leistungsumfang der Detektionsmethoden und ihrer Verdecktheit berücksichtigt werden. \\
+%		\end{addmargin}
+%		
+%		\noindent\textbf{3. Welche Methoden und Verfahren können zur Optimierung der in einem virtuellen System generierten Analyse-Resultate eingesetzt werden?}\\
+%		
+%		\begin{addmargin}[1em]{0em}
+%			Ein wesentliches Element zur Optimierung von Analyse-Resultaten im Kontext virtualisierter Systeme ist die Konfiguration des Systems zur möglichst realitätsnahen Emulation einer produktiven Umgebung. Auf diese Weise können die im Rahmen der vorhergehenden Analyse identifizierten Detektionsmechanismen von Malware-Implementierungen getäuscht werden, wodurch final die Analyse des vollständigen Funktionalitätsumfangs ermöglicht wird.
+%			Unter Berücksichtigung der Diversität moderner Malware-Realisierungen sind weiterhin Konzepte zu erarbeiten, welche eine möglichst adaptive Anpassung der identifizierten Optimierungsmethoden an die ver- \makebox[\linewidth][s]{schiedenen Implementierungen von virtualisierten Systemumgebungen ermöglichen.}\\
+%			
+%			
+%		\end{addmargin}
+%		
+%		\noindent Die Evaluation der Analyse-Techniken konzentriert sich im Rahmen dieses Dokumentes auf die signaturbasierte Identifikation von Malware-Kompromittierungen.
+%		Die Referenzierung von Methoden, deren Implementierung auf heuristischen Ansätzen oder neuronalen Netze basiert, wird daher nur an ausgewählten Stellen der \mbox{Vollständigkeit halber vorgenommen.}
